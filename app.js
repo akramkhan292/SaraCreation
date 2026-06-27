@@ -148,7 +148,7 @@
         <img src="${escapeHtml(product.images[0])}" alt="">
         <span>
           <strong>${escapeHtml(product.name)}</strong>
-          <small>${formatPrice(product.price)}</small>
+          <small>${displayPrice(product)}</small>
         </span>
       </button>
     `).join("");
@@ -191,8 +191,8 @@
   }
 
   function sortProducts(a, b) {
-    if (state.sort === "price-low") return a.price - b.price;
-    if (state.sort === "price-high") return b.price - a.price;
+    if (state.sort === "price-low") return sortablePrice(a, "high") - sortablePrice(b, "high");
+    if (state.sort === "price-high") return sortablePrice(b, "low") - sortablePrice(a, "low");
     if (state.sort === "stock") return b.stock - a.stock;
     if (state.sort === "newest") return products.indexOf(b) - products.indexOf(a);
     return Number(b.featured) - Number(a.featured) || products.indexOf(a) - products.indexOf(b);
@@ -214,7 +214,7 @@
         <div class="product-info">
           <div class="product-title-row">
             <strong>${escapeHtml(product.name)}</strong>
-            <span class="price">${formatPrice(product.price)}</span>
+            <span class="price">${displayPrice(product)}</span>
           </div>
           <div class="meta">
             <span>${escapeHtml(product.brand)}</span>
@@ -290,7 +290,7 @@
         <div class="dialog-details">
           <p class="eyebrow">${escapeHtml(product.brand)} / ${escapeHtml(product.category)}</p>
           <h2 id="dialogTitle">${escapeHtml(product.name)}</h2>
-          <div class="detail-price">${formatPrice(product.price)}</div>
+          <div class="detail-price">${displayPrice(product)}</div>
           <p class="detail-copy">${escapeHtml(product.description)}</p>
           <div class="detail-list">
             <div><span>Product ID</span><strong>${escapeHtml(product.id)}</strong></div>
@@ -434,7 +434,7 @@
   }
 
   function productShareText(product) {
-    return `Hi saracreations0810, I am interested in ${product.name} (${product.id}) priced at ${formatPrice(product.price)}. Link: ${productUrl(product)}`;
+    return `Hi saracreations0810, I am interested in ${product.name} (${product.id}) priced at ${displayPrice(product)}. Link: ${productUrl(product)}`;
   }
 
   function productUrl(product) {
@@ -460,6 +460,18 @@
 
   function formatPrice(amount) {
     return `Rs. ${new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(amount)}`;
+  }
+
+  function displayPrice(product) {
+    if (product.priceLabel) return product.priceLabel;
+    return formatPrice(product.price);
+  }
+
+  function sortablePrice(product, emptyPosition) {
+    if (!product.price || product.priceLabel) {
+      return emptyPosition === "high" ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY;
+    }
+    return product.price;
   }
 
   function escapeHtml(value) {
