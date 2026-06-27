@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Emerald floral lawn fabric</title>
+  <desc id="desc">Sample product image with emerald floral fabric motifs.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123c35"/>
+      <stop offset="1" stop-color="#28695b"/>
+    </linearGradient>
+    <pattern id="flowers" width="150" height="150" patternUnits="userSpaceOnUse">
+      <path d="M75 24c18 24 32 38 55 51-23 13-37 27-55 51-18-24-32-38-55-51 23-13 37-27 55-51z" fill="none" stroke="#d6b55f" stroke-width="4" opacity=".62"/>
+      <circle cx="75" cy="75" r="13" fill="#f4d7bd" opacity=".82"/>
+      <path d="M38 28c16 10 25 22 30 40-18-5-30-14-40-30z" fill="#f6efe5" opacity=".52"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#base)"/>
+  <rect width="900" height="1125" fill="url(#flowers)"/>
+  <path d="M0 830c190-96 350-118 496-66 139 50 246 39 404-54v415H0z" fill="#f6efe5" opacity=".22"/>
+  <path d="M0 0h900v104h-900zM0 1021h900v104h-900z" fill="#1b1715" opacity=".32"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Layered premium fabric display</title>
+  <desc id="desc">Abstract textile display inspired by South Asian lawn and cotton fabrics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f0e4"/>
+      <stop offset="0.48" stop-color="#fdfbf7"/>
+      <stop offset="1" stop-color="#e8d3b1"/>
+    </linearGradient>
+    <pattern id="motif" width="86" height="86" patternUnits="userSpaceOnUse">
+      <path d="M43 7c11 16 21 27 36 36-15 9-25 20-36 36C32 63 22 52 7 43 22 34 32 23 43 7z" fill="none" stroke="#d6b55f" stroke-width="2" opacity=".36"/>
+      <circle cx="43" cy="43" r="4" fill="#7d1f2d" opacity=".35"/>
+    </pattern>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#1b1715" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="760" fill="url(#bg)"/>
+  <rect width="1400" height="760" fill="url(#motif)" opacity=".55"/>
+  <g filter="url(#soft)">
+    <path d="M110 512c170-122 320-168 452-139 103 22 199 85 305 93 137 10 249-70 416-147v292H110z" fill="#1f5147"/>
+    <path d="M170 556c142-104 278-138 406-103 105 29 196 98 310 102 136 5 240-84 344-136v207H170z" fill="#7d1f2d"/>
+    <path d="M232 603c110-71 226-96 348-74 124 22 212 91 337 89 92-2 173-43 257-87v117H232z" fill="#d6b55f"/>
+    <path d="M294 640c102-43 207-54 319-33 96 18 185 58 286 55 75-2 143-28 213-62v54H294z" fill="#f6efe5"/>
+  </g>
+  <g opacity=".88">
+    <circle cx="1120" cy="158" r="94" fill="#1b1715"/>
+    <path d="M1084 162c24 20 54 28 83 18 22-8 35-26 34-45-1-17-13-31-32-36-18-5-40-2-65 9l9 23c17-8 33-10 44-7 9 2 14 8 14 14 0 8-7 16-18 20-19 7-38 1-55-14z" fill="#d6b55f"/>
+  </g>
+</svg>

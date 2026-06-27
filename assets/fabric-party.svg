@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Burgundy party wear fabric</title>
+  <desc id="desc">Sample product image with burgundy party wear embroidery motifs.</desc>
+  <defs>
+    <radialGradient id="glow" cx=".5" cy=".25" r=".9">
+      <stop offset="0" stop-color="#a7374a"/>
+      <stop offset=".58" stop-color="#641827"/>
+      <stop offset="1" stop-color="#1b1715"/>
+    </radialGradient>
+    <pattern id="zari" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="60" cy="60" r="24" fill="none" stroke="#d6b55f" stroke-width="5" opacity=".64"/>
+      <path d="M60 18v84M18 60h84M30 30l60 60M90 30L30 90" stroke="#f6efe5" stroke-width="2" opacity=".28"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#glow)"/>
+  <rect width="900" height="1125" fill="url(#zari)"/>
+  <path d="M0 850c205-95 356-110 486-47 122 60 234 57 414-32v354H0z" fill="#d6b55f" opacity=".18"/>
+  <path d="M0 174h900M0 951h900" stroke="#d6b55f" stroke-width="18" opacity=".8"/>
+</svg>

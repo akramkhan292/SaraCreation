@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Pure cotton ivory fabric</title>
+  <desc id="desc">Sample product image with ivory cotton weave and teal border.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#ead9bd"/>
+    </linearGradient>
+    <pattern id="weave" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M0 17h34M17 0v34" stroke="#c7a660" stroke-width="2" opacity=".35"/>
+      <path d="M0 0h34v34H0z" fill="none" stroke="#ffffff" stroke-width="1" opacity=".55"/>
+    </pattern>
+    <pattern id="sprig" width="160" height="160" patternUnits="userSpaceOnUse">
+      <path d="M80 34v92M80 82c-27-11-39-27-38-50 25 4 39 19 38 50zM80 92c30-12 45-29 44-55-28 5-44 21-44 55z" fill="none" stroke="#1f5147" stroke-width="5" opacity=".55"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#base)"/>
+  <rect width="900" height="1125" fill="url(#weave)"/>
+  <rect width="900" height="1125" fill="url(#sprig)" opacity=".7"/>
+  <rect x="0" y="0" width="116" height="1125" fill="#1f5147"/>
+  <rect x="784" y="0" width="116" height="1125" fill="#7d1f2d"/>
+  <path d="M56 0v1125M844 0v1125" stroke="#d6b55f" stroke-width="10"/>
+</svg>

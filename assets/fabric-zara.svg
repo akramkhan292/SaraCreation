@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Ivory party wear fabric</title>
+  <desc id="desc">Sample product image with ivory party wear floral motifs.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf6ee"/>
+      <stop offset="1" stop-color="#d9b876"/>
+    </linearGradient>
+    <pattern id="ornate" width="150" height="150" patternUnits="userSpaceOnUse">
+      <path d="M75 20c23 21 40 38 55 55-15 17-32 34-55 55-23-21-40-38-55-55 15-17 32-34 55-55z" fill="none" stroke="#1b1715" stroke-width="4" opacity=".35"/>
+      <path d="M75 45c13 11 23 21 31 30-8 9-18 19-31 30-13-11-23-21-31-30 8-9 18-19 31-30z" fill="#7d1f2d" opacity=".22"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#base)"/>
+  <rect width="900" height="1125" fill="url(#ornate)"/>
+  <path d="M0 0h900v1125H0z" fill="none" stroke="#d6b55f" stroke-width="36"/>
+</svg>

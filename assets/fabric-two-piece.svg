@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Mustard two piece fabric</title>
+  <desc id="desc">Sample product image with mustard and black two piece styling.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0cb72"/>
+      <stop offset="1" stop-color="#b78223"/>
+    </linearGradient>
+    <pattern id="line" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M0 40h80M40 0v80" stroke="#1b1715" stroke-width="5" opacity=".2"/>
+      <circle cx="40" cy="40" r="13" fill="#7d1f2d" opacity=".36"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#base)"/>
+  <rect width="900" height="1125" fill="url(#line)"/>
+  <rect x="0" y="0" width="900" height="258" fill="#1b1715" opacity=".88"/>
+  <rect x="0" y="867" width="900" height="258" fill="#f6efe5" opacity=".65"/>
+  <path d="M90 122h720M90 997h720" stroke="#d6b55f" stroke-width="14"/>
+</svg>

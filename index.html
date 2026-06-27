@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="saracreations0810 clothing catalog for premium Pakistani and Indian stitched and un-stitched fabrics.">
+    <title>saracreations0810 | Clothing Catalog</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="products.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#catalog" aria-label="saracreations0810 home">
+        <img src="assets/logo.svg" alt="" width="44" height="44">
+        <span>
+          <strong>saracreations0810</strong>
+          <small>Premium clothing catalog</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#catalog">Catalog</a>
+        <a href="#featured">Featured</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-action" id="headerWhatsApp" href="#" target="_blank" rel="noreferrer">
+        <span aria-hidden="true" class="icon-wrap" data-icon="message"></span>
+        Order
+      </a>
+    </header>
+
+    <main>
+      <section class="intro-band" aria-labelledby="introTitle">
+        <div class="intro-copy">
+          <p class="eyebrow">Stitched and un-stitched collections</p>
+          <h1 id="introTitle">Browse premium Pakistani and Indian fabrics.</h1>
+          <p>Explore lawn, cotton, party wear, two piece, and co-ord sets with quick WhatsApp ordering.</p>
+          <div class="intro-actions">
+            <a class="primary-link" href="#catalog">
+              <span aria-hidden="true" class="icon-wrap" data-icon="grid"></span>
+              Shop catalog
+            </a>
+            <a class="secondary-link" href="#contact">
+              <span aria-hidden="true" class="icon-wrap" data-icon="mail"></span>
+              Contact
+            </a>
+          </div>
+        </div>
+        <div class="intro-media" aria-hidden="true">
+          <img src="assets/fabric-hero.svg" alt="">
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalog" aria-labelledby="catalogTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Live catalog</p>
+            <h2 id="catalogTitle">Products</h2>
+          </div>
+          <p id="resultCount" class="result-count">0 products</p>
+        </div>
+
+        <div class="catalog-layout">
+          <aside class="filters" aria-label="Product filters">
+            <label class="search-field">
+              <span aria-hidden="true" class="icon-wrap" data-icon="search"></span>
+              <input id="searchInput" type="search" placeholder="Search products, brands, tags" autocomplete="off">
+            </label>
+
+            <div class="filter-group">
+              <span class="filter-label">Category</span>
+              <div class="chip-row" id="categoryChips"></div>
+            </div>
+
+            <label class="field">
+              <span>Brand</span>
+              <select id="brandFilter"></select>
+            </label>
+
+            <label class="field">
+              <span>Fabric type</span>
+              <select id="fabricFilter"></select>
+            </label>
+
+            <label class="field">
+              <span>Availability</span>
+              <select id="stockFilter">
+                <option value="all">All products</option>
+                <option value="available">Available only</option>
+                <option value="out">Out of stock</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Sort</span>
+              <select id="sortFilter">
+                <option value="featured">Featured first</option>
+                <option value="newest">Newest</option>
+                <option value="price-low">Price low to high</option>
+                <option value="price-high">Price high to low</option>
+                <option value="stock">Stock quantity</option>
+              </select>
+            </label>
+          </aside>
+
+          <div class="product-area">
+            <div class="featured-strip" id="featured" aria-label="Featured products">
+              <div>
+                <p class="eyebrow">Featured</p>
+                <h3>Ready for sharing</h3>
+              </div>
+              <div id="featuredList" class="featured-list"></div>
+            </div>
+
+            <div class="product-grid" id="productGrid" aria-live="polite"></div>
+            <div class="empty-state" id="emptyState" hidden>
+              <h3>No products found</h3>
+              <p>Try a different search or clear one of the filters.</p>
+              <button class="text-button" id="clearFilters" type="button">Clear filters</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contactTitle">
+        <div>
+          <p class="eyebrow">Orders and enquiries</p>
+          <h2 id="contactTitle">Contact saracreations0810</h2>
+        </div>
+        <div class="contact-actions">
+          <a id="contactWhatsApp" class="contact-button" href="#" target="_blank" rel="noreferrer">
+            <span aria-hidden="true" class="icon-wrap" data-icon="message"></span>
+            WhatsApp
+          </a>
+          <a class="contact-button" href="mailto:saracreations0810@gmail.com">
+            <span aria-hidden="true" class="icon-wrap" data-icon="mail"></span>
+            Email
+          </a>
+          <a id="instagramLink" class="contact-button" href="#" target="_blank" rel="noreferrer">
+            <span aria-hidden="true" class="icon-wrap" data-icon="instagram"></span>
+            Instagram
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>saracreations0810</span>
+      <span>Static catalog - free-hosting ready</span>
+    </footer>
+
+    <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
+      <button class="icon-button close-dialog" id="closeDialog" type="button" aria-label="Close product details" title="Close">
+        <span aria-hidden="true" class="icon-wrap" data-icon="x"></span>
+      </button>
+      <div id="dialogContent"></div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

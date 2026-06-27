@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Indigo daily wear fabric</title>
+  <desc id="desc">Sample product image with indigo daily wear block print motifs.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#20242b"/>
+      <stop offset="1" stop-color="#355564"/>
+    </linearGradient>
+    <pattern id="block" width="108" height="108" patternUnits="userSpaceOnUse">
+      <rect x="23" y="23" width="62" height="62" rx="10" fill="none" stroke="#f2d6a4" stroke-width="4" opacity=".58"/>
+      <circle cx="54" cy="54" r="9" fill="#d6b55f" opacity=".7"/>
+      <path d="M23 54h62M54 23v62" stroke="#f6efe5" stroke-width="2" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#base)"/>
+  <rect width="900" height="1125" fill="url(#block)"/>
+  <rect x="90" y="90" width="720" height="945" fill="none" stroke="#d6b55f" stroke-width="10" opacity=".5"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Rose original lawn fabric</title>
+  <desc id="desc">Sample product image with rose and ivory lawn fabric motifs.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7eadb"/>
+      <stop offset="1" stop-color="#eec8c1"/>
+    </linearGradient>
+    <pattern id="rose" width="180" height="180" patternUnits="userSpaceOnUse">
+      <circle cx="76" cy="82" r="38" fill="#b95462" opacity=".62"/>
+      <circle cx="88" cy="72" r="28" fill="#7d1f2d" opacity=".5"/>
+      <path d="M105 103c32-1 51 10 66 34-34 2-54-8-66-34zM47 101c-31-2-50 8-66 32 33 3 53-6 66-32z" fill="#1f5147" opacity=".45"/>
+      <path d="M0 178h180M178 0v180" stroke="#d6b55f" stroke-width="2" opacity=".28"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#base)"/>
+  <rect width="900" height="1125" fill="url(#rose)" opacity=".9"/>
+  <path d="M118 118h664v889H118z" fill="none" stroke="#d6b55f" stroke-width="12" opacity=".5"/>
+</svg>

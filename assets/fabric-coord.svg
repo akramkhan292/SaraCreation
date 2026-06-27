@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Teal co-ord set fabric</title>
+  <desc id="desc">Sample product image with teal co-ord set geometric motifs.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dfeee7"/>
+      <stop offset=".5" stop-color="#7eb5a6"/>
+      <stop offset="1" stop-color="#1f5147"/>
+    </linearGradient>
+    <pattern id="geo" width="130" height="130" patternUnits="userSpaceOnUse">
+      <path d="M65 14l51 51-51 51-51-51z" fill="none" stroke="#1b1715" stroke-width="4" opacity=".42"/>
+      <path d="M65 33l32 32-32 32-32-32z" fill="#d6b55f" opacity=".42"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#base)"/>
+  <rect width="900" height="1125" fill="url(#geo)"/>
+  <path d="M0 0h310v1125H0z" fill="#f6efe5" opacity=".34"/>
+  <path d="M310 0v1125" stroke="#7d1f2d" stroke-width="18" opacity=".7"/>
+</svg>

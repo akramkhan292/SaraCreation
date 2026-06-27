@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Sage luxury lawn fabric</title>
+  <desc id="desc">Sample product image with sage luxury lawn embroidery motifs.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eff4e9"/>
+      <stop offset="1" stop-color="#9bae86"/>
+    </linearGradient>
+    <pattern id="paisley" width="170" height="170" patternUnits="userSpaceOnUse">
+      <path d="M93 28c39 23 55 60 41 92-12 28-45 41-74 30-31-12-46-46-33-76 8-19 25-33 47-40-8 25 2 44 30 57" fill="none" stroke="#7d1f2d" stroke-width="6" opacity=".5"/>
+      <circle cx="85" cy="84" r="9" fill="#d6b55f" opacity=".7"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1125" fill="url(#base)"/>
+  <rect width="900" height="1125" fill="url(#paisley)"/>
+  <path d="M0 0h900v95H0zM0 1030h900v95H0z" fill="#1f5147" opacity=".75"/>
+</svg>
