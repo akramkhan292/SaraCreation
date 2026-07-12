@@ -1,31 +1,30 @@
 (function () {
   "use strict";
 
+  const collections = Array.isArray(window.SARA_COLLECTIONS) ? window.SARA_COLLECTIONS : [];
   const products = Array.isArray(window.SARA_PRODUCTS) ? window.SARA_PRODUCTS : [];
   const config = window.SARA_CONFIG || {};
 
   const state = {
-    search: "",
-    category: "all",
-    brand: "all",
-    fabric: "all",
-    stock: "all",
-    sort: "featured"
+    collectionSlug: null,
+    collectionSearch: "",
+    designSearch: ""
   };
 
   const els = {};
-  let currentDialogProduct = null;
+  let currentProduct = null;
+  let suppressDialogRoute = false;
   let toastTimer = 0;
 
   const icons = {
+    "arrow-left": '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path><path d="M9 12h10"></path></svg>',
+    "arrow-right": '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>',
+    "chevron-down": '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>',
     search: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>',
     message: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3 1.4-5A8 8 0 1 1 21 12z"></path></svg>',
     share: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.7 6.8-4.4M8.6 13.3l6.8 4.4"></path></svg>',
-    copy: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>',
     mail: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>',
     instagram: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>',
-    grid: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>',
-    eye: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>',
     x: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>'
   };
 
@@ -35,30 +34,33 @@
     cacheElements();
     hydrateIcons(document);
     setupStaticLinks();
-    setupFilters();
-    renderCatalogSummary();
+    renderCollectionMenu();
     bindEvents();
-    renderFeatured();
-    renderCatalog();
-    openProductFromHash();
+    handleRoute(false);
   }
 
   function cacheElements() {
-    els.search = document.getElementById("searchInput");
-    els.categoryChips = document.getElementById("categoryChips");
-    els.brand = document.getElementById("brandFilter");
-    els.fabric = document.getElementById("fabricFilter");
-    els.stock = document.getElementById("stockFilter");
-    els.sort = document.getElementById("sortFilter");
-    els.grid = document.getElementById("productGrid");
-    els.empty = document.getElementById("emptyState");
-    els.clear = document.getElementById("clearFilters");
-    els.count = document.getElementById("resultCount");
-    els.collectionCount = document.getElementById("collectionCount");
-    els.brandCount = document.getElementById("brandCount");
-    els.categoryCount = document.getElementById("categoryCount");
-    els.featuredStrip = document.getElementById("featured");
-    els.featured = document.getElementById("featuredList");
+    els.catalog = document.getElementById("catalog");
+    els.catalogIntro = document.getElementById("catalogIntro");
+    els.collectionMenu = document.getElementById("collectionMenu");
+    els.menuCollectionCount = document.getElementById("menuCollectionCount");
+    els.collectionMenuList = document.getElementById("collectionMenuList");
+    els.collectionsView = document.getElementById("collectionsView");
+    els.collectionView = document.getElementById("collectionView");
+    els.collectionSearch = document.getElementById("collectionSearch");
+    els.collectionGrid = document.getElementById("collectionGrid");
+    els.collectionEmpty = document.getElementById("collectionEmpty");
+    els.collectionResultCount = document.getElementById("collectionResultCount");
+    els.clearCollectionSearch = document.getElementById("clearCollectionSearch");
+    els.allCollectionsButton = document.getElementById("allCollectionsButton");
+    els.selectedCollectionEyebrow = document.getElementById("selectedCollectionEyebrow");
+    els.selectedCollectionTitle = document.getElementById("selectedCollectionTitle");
+    els.selectedCollectionMeta = document.getElementById("selectedCollectionMeta");
+    els.designSearch = document.getElementById("designSearch");
+    els.productGrid = document.getElementById("productGrid");
+    els.productEmpty = document.getElementById("productEmpty");
+    els.designResultCount = document.getElementById("designResultCount");
+    els.clearDesignSearch = document.getElementById("clearDesignSearch");
     els.dialog = document.getElementById("productDialog");
     els.dialogContent = document.getElementById("dialogContent");
     els.closeDialog = document.getElementById("closeDialog");
@@ -67,344 +69,380 @@
 
   function hydrateIcons(root) {
     root.querySelectorAll("[data-icon]").forEach((node) => {
-      const name = node.getAttribute("data-icon");
-      node.innerHTML = icons[name] || "";
+      node.innerHTML = icons[node.dataset.icon] || "";
     });
   }
 
   function setupStaticLinks() {
-    const message = encodeURIComponent("Hi saracreations0810, I want to know more about your latest clothing collection.");
+    const message = encodeURIComponent("Hi saracreations0810, I want to know more about your latest designer collections.");
     const whatsappUrl = buildWhatsAppUrl(message);
-    const instagram = config.instagramUrl || "https://www.instagram.com/";
+    const instagramUrl = config.instagramUrl || "https://www.instagram.com/";
 
     document.getElementById("headerWhatsApp").href = whatsappUrl;
     document.getElementById("contactWhatsApp").href = whatsappUrl;
-    document.getElementById("instagramLink").href = instagram;
-  }
-
-  function setupFilters() {
-    const categories = unique(products.map((product) => product.category));
-    const brands = unique(products.map((product) => product.brand));
-    const fabrics = unique(products.map((product) => product.fabricType));
-
-    els.categoryChips.innerHTML = [
-      chipTemplate("all", "All", true),
-      ...categories.map((category) => chipTemplate(category, category, false))
-    ].join("");
-
-    fillSelect(els.brand, [["all", "All brands"], ...brands.map((brand) => [brand, brand])]);
-    fillSelect(els.fabric, [["all", "All fabric types"], ...fabrics.map((fabric) => [fabric, fabric])]);
+    document.getElementById("instagramLink").href = instagramUrl;
   }
 
   function bindEvents() {
-    els.search.addEventListener("input", (event) => {
-      state.search = event.target.value.trim().toLowerCase();
-      renderCatalog();
+    els.collectionSearch.addEventListener("input", (event) => {
+      state.collectionSearch = event.target.value.trim().toLowerCase();
+      renderCollections();
     });
 
-    els.categoryChips.addEventListener("click", (event) => {
-      const button = event.target.closest("button[data-category]");
+    els.clearCollectionSearch.addEventListener("click", () => {
+      state.collectionSearch = "";
+      els.collectionSearch.value = "";
+      renderCollections();
+      els.collectionSearch.focus();
+    });
+
+    els.collectionGrid.addEventListener("click", handleCollectionClick);
+    els.collectionMenuList.addEventListener("click", handleCollectionClick);
+
+    els.allCollectionsButton.addEventListener("click", () => {
+      updateRoute("#catalog", "push");
+      showCollections(true);
+    });
+
+    els.designSearch.addEventListener("input", (event) => {
+      state.designSearch = event.target.value.trim().toLowerCase();
+      renderProducts();
+    });
+
+    els.clearDesignSearch.addEventListener("click", () => {
+      state.designSearch = "";
+      els.designSearch.value = "";
+      renderProducts();
+      els.designSearch.focus();
+    });
+
+    els.productGrid.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-product]");
       if (!button) return;
-      state.category = button.dataset.category;
-      updateCategoryChips();
-      renderCatalog();
+      const product = findProduct(button.dataset.product);
+      if (product) openProduct(product, true);
     });
 
-    els.brand.addEventListener("change", (event) => {
-      state.brand = event.target.value;
-      renderCatalog();
+    els.dialogContent.addEventListener("click", handleDialogAction);
+    els.closeDialog.addEventListener("click", () => els.dialog.close());
+    els.dialog.addEventListener("click", (event) => {
+      if (event.target === els.dialog) els.dialog.close();
     });
+    els.dialog.addEventListener("close", handleDialogClose);
 
-    els.fabric.addEventListener("change", (event) => {
-      state.fabric = event.target.value;
-      renderCatalog();
-    });
-
-    els.stock.addEventListener("change", (event) => {
-      state.stock = event.target.value;
-      renderCatalog();
-    });
-
-    els.sort.addEventListener("change", (event) => {
-      state.sort = event.target.value;
-      renderCatalog();
-    });
-
-    els.clear.addEventListener("click", resetFilters);
-
-    els.grid.addEventListener("click", handleProductAction);
-    els.featured.addEventListener("click", handleFeaturedClick);
-    els.closeDialog.addEventListener("click", closeDialog);
-
-    els.dialog.addEventListener("close", () => {
-      currentDialogProduct = null;
-      if (window.location.hash.startsWith("#product=")) {
-        history.replaceState("", document.title, window.location.pathname + window.location.search + "#catalog");
+    document.addEventListener("click", (event) => {
+      if (els.collectionMenu.open && !els.collectionMenu.contains(event.target)) {
+        els.collectionMenu.removeAttribute("open");
       }
     });
 
-    window.addEventListener("hashchange", openProductFromHash);
+    window.addEventListener("popstate", () => handleRoute(false));
+    window.addEventListener("hashchange", () => handleRoute(false));
   }
 
-  function renderFeatured() {
-    const featured = products.filter((product) => product.featured).slice(0, 4);
-    if (!featured.length) {
-      els.featuredStrip.hidden = true;
-      return;
-    }
-
-    els.featuredStrip.hidden = false;
-    els.featured.innerHTML = featured.map((product) => `
-      <button class="featured-item" type="button" data-slug="${escapeHtml(product.slug)}">
-        <img src="${escapeHtml(product.images[0])}" alt="">
+  function renderCollectionMenu() {
+    els.menuCollectionCount.textContent = formatNumber(collections.length);
+    els.collectionMenuList.innerHTML = collections.map((collection) => `
+      <button class="collection-menu-item" type="button" data-collection="${escapeHtml(collection.slug)}">
+        <img src="${escapeHtml(collection.coverImage)}" alt="" loading="lazy" decoding="async">
         <span>
-          <strong>${escapeHtml(product.name)}</strong>
-          <small>${escapeHtml(featuredMeta(product))}</small>
+          <strong>${escapeHtml(collection.name)}</strong>
+          <small>${escapeHtml(collection.brand)} / ${formatNumber(collection.productCount)} ${plural(collection.productCount, "design")}</small>
         </span>
+        <span class="icon-wrap" data-icon="arrow-right" aria-hidden="true"></span>
       </button>
     `).join("");
+    hydrateIcons(els.collectionMenuList);
   }
 
-  function renderCatalog() {
-    const filtered = getFilteredProducts();
-    els.count.textContent = `${formatNumber(filtered.length)} ${filtered.length === 1 ? "collection" : "collections"}`;
-    els.empty.hidden = filtered.length > 0;
-    els.grid.hidden = filtered.length === 0;
-    els.grid.innerHTML = filtered.map(productCardTemplate).join("");
-    hydrateIcons(els.grid);
+  function renderCollections() {
+    const filtered = collections.filter((collection) => {
+      const text = [collection.name, collection.brand, collection.category].join(" ").toLowerCase();
+      return !state.collectionSearch || text.includes(state.collectionSearch);
+    });
+
+    els.collectionResultCount.textContent = `${formatNumber(filtered.length)} ${plural(filtered.length, "collection")}`;
+    els.collectionEmpty.hidden = filtered.length > 0;
+    els.collectionGrid.hidden = filtered.length === 0;
+    els.collectionGrid.innerHTML = filtered.map(collectionCardTemplate).join("");
+    hydrateIcons(els.collectionGrid);
   }
 
-  function renderCatalogSummary() {
-    if (!els.collectionCount) return;
-
-    els.collectionCount.textContent = formatNumber(products.length);
-    els.brandCount.textContent = formatNumber(unique(products.map((product) => product.brand)).length);
-    els.categoryCount.textContent = formatNumber(unique(products.map((product) => product.category)).length);
-  }
-
-  function getFilteredProducts() {
-    return products
-      .filter((product) => {
-        const text = [
-          product.name,
-          product.brand,
-          product.category,
-          product.fabricType,
-          product.description,
-          product.remarks,
-          (product.tags || []).join(" ")
-        ].join(" ").toLowerCase();
-
-        const matchesSearch = !state.search || text.includes(state.search);
-        const matchesCategory = state.category === "all" || product.category === state.category;
-        const matchesBrand = state.brand === "all" || product.brand === state.brand;
-        const matchesFabric = state.fabric === "all" || product.fabricType === state.fabric;
-        const matchesStock =
-          state.stock === "all" ||
-          (state.stock === "available" && product.stock > 0) ||
-          (state.stock === "out" && product.stock <= 0);
-
-        return matchesSearch && matchesCategory && matchesBrand && matchesFabric && matchesStock;
-      })
-      .sort(sortProducts);
-  }
-
-  function sortProducts(a, b) {
-    if (state.sort === "price-low") return comparePrices(a, b, "low");
-    if (state.sort === "price-high") return comparePrices(a, b, "high");
-    if (state.sort === "brand") return a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name);
-    if (state.sort === "pages") return (b.pageCount || 0) - (a.pageCount || 0) || a.name.localeCompare(b.name);
-    if (state.sort === "stock") return b.stock - a.stock;
-    if (state.sort === "newest") return products.indexOf(b) - products.indexOf(a);
-    return Number(b.featured) - Number(a.featured) || products.indexOf(a) - products.indexOf(b);
-  }
-
-  function productCardTemplate(product) {
-    const statusClass = availabilityClass(product);
-    const statusLabel = availabilityLabel(product);
-    const meta = [
-      product.brand,
-      product.fabricType,
-      product.pageCount ? `${product.pageCount} ${product.pageCount === 1 ? "page" : "pages"}` : ""
-    ].filter(Boolean);
-
+  function collectionCardTemplate(collection) {
     return `
-      <article class="product-card">
-        <div class="product-media">
-          <img src="${escapeHtml(product.images[0])}" alt="${escapeHtml(product.name)}">
-          <div class="badge-row">
-            <span class="badge">${escapeHtml(product.category)}</span>
-            <span class="status ${statusClass}">${escapeHtml(statusLabel)}</span>
-          </div>
-        </div>
-        <div class="product-info">
-          <div class="product-title-row">
-            <strong>${escapeHtml(product.name)}</strong>
-            <span class="price">${escapeHtml(displayPrice(product))}</span>
-          </div>
-          <div class="meta">
-            ${meta.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
-          </div>
-          <div class="product-actions">
-            <button class="view-button" type="button" data-action="view" data-slug="${escapeHtml(product.slug)}">
-              <span aria-hidden="true" class="icon-wrap" data-icon="eye"></span>
-              View
-            </button>
-            <button class="icon-button" type="button" data-action="whatsapp" data-slug="${escapeHtml(product.slug)}" aria-label="Order ${escapeHtml(product.name)} on WhatsApp" title="WhatsApp">
-              <span aria-hidden="true" class="icon-wrap" data-icon="message"></span>
-            </button>
-            <button class="icon-button" type="button" data-action="share" data-slug="${escapeHtml(product.slug)}" aria-label="Share ${escapeHtml(product.name)}" title="Share">
-              <span aria-hidden="true" class="icon-wrap" data-icon="share"></span>
-            </button>
-          </div>
-        </div>
+      <article class="collection-card">
+        <button type="button" data-collection="${escapeHtml(collection.slug)}" aria-label="Open ${escapeHtml(collection.name)}">
+          <span class="collection-card-media">
+            <img src="${escapeHtml(collection.coverImage)}" alt="${escapeHtml(collection.name)}" loading="lazy" decoding="async">
+          </span>
+          <span class="collection-card-body">
+            <small>${escapeHtml(collection.brand)}</small>
+            <strong>${escapeHtml(collection.name)}</strong>
+            <span class="collection-card-meta">
+              ${formatNumber(collection.productCount)} ${plural(collection.productCount, "design")}
+              <span class="icon-wrap" data-icon="arrow-right" aria-hidden="true"></span>
+            </span>
+          </span>
+        </button>
       </article>
     `;
   }
 
-  function handleProductAction(event) {
-    const button = event.target.closest("button[data-action]");
+  function handleCollectionClick(event) {
+    const button = event.target.closest("button[data-collection]");
     if (!button) return;
+    const collection = findCollection(button.dataset.collection);
+    if (!collection) return;
 
-    const product = findProduct(button.dataset.slug);
-    if (!product) return;
-
-    if (button.dataset.action === "view") {
-      openProduct(product);
-    }
-
-    if (button.dataset.action === "whatsapp") {
-      window.open(buildProductWhatsAppUrl(product), "_blank", "noopener");
-    }
-
-    if (button.dataset.action === "share") {
-      shareProduct(product);
-    }
+    updateRoute(`#collection=${encodeURIComponent(collection.slug)}`, "push");
+    showCollection(collection, true);
   }
 
-  function handleFeaturedClick(event) {
-    const button = event.target.closest("button[data-slug]");
-    if (!button) return;
-    const product = findProduct(button.dataset.slug);
-    if (product) openProduct(product);
+  function showCollections(shouldScroll) {
+    closeDialogForRoute();
+    state.collectionSlug = null;
+    state.designSearch = "";
+    els.designSearch.value = "";
+    els.catalogIntro.hidden = false;
+    els.collectionView.hidden = true;
+    els.collectionsView.hidden = false;
+    els.collectionMenu.removeAttribute("open");
+    updateMenuState();
+    renderCollections();
+    if (shouldScroll) scrollToCatalog();
   }
 
-  function openProduct(product) {
-    currentDialogProduct = product;
-    window.location.hash = `product=${product.slug}`;
+  function showCollection(collection, shouldScroll) {
+    state.collectionSlug = collection.slug;
+    state.designSearch = "";
+    els.designSearch.value = "";
+    els.selectedCollectionEyebrow.textContent = `${collection.brand} / ${collection.category}`;
+    els.selectedCollectionTitle.textContent = collection.name;
+    els.selectedCollectionMeta.textContent = collection.fabricType;
+    els.catalogIntro.hidden = true;
+    els.collectionsView.hidden = true;
+    els.collectionView.hidden = false;
+    els.collectionMenu.removeAttribute("open");
+    updateMenuState();
+    renderProducts();
+    if (shouldScroll) scrollToCatalog();
+  }
+
+  function renderProducts() {
+    const collection = findCollection(state.collectionSlug);
+    if (!collection) return;
+
+    const filtered = products
+      .filter((product) => product.collectionSlug === collection.slug)
+      .filter((product) => {
+        const text = [product.name, product.id, product.brand, product.category].join(" ").toLowerCase();
+        return !state.designSearch || text.includes(state.designSearch);
+      })
+      .sort((a, b) => a.sequence - b.sequence);
+
+    els.designResultCount.textContent = `${formatNumber(filtered.length)} ${plural(filtered.length, "design")}`;
+    els.productEmpty.hidden = filtered.length > 0;
+    els.productGrid.hidden = filtered.length === 0;
+    els.productGrid.innerHTML = filtered.map(productCardTemplate).join("");
+  }
+
+  function productCardTemplate(product) {
+    return `
+      <article class="product-card">
+        <button type="button" data-product="${escapeHtml(product.slug)}" aria-label="View ${escapeHtml(product.name)}, reference ${escapeHtml(product.id)}">
+          <span class="product-media">
+            <img src="${escapeHtml(product.images[0])}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
+          </span>
+          <span class="product-info">
+            <small>${escapeHtml(product.id)}</small>
+            <strong>${escapeHtml(product.name)}</strong>
+          </span>
+        </button>
+      </article>
+    `;
+  }
+
+  function openProduct(product, shouldUpdateRoute) {
+    const collection = findCollection(product.collectionSlug);
+    if (!collection) return;
+    if (state.collectionSlug !== collection.slug) showCollection(collection, false);
+
+    currentProduct = product;
     renderProductDialog(product);
-    if (!els.dialog.open) {
-      els.dialog.showModal();
+    if (shouldUpdateRoute) {
+      updateRoute(`#product=${encodeURIComponent(product.slug)}`, "push");
     }
+    if (!els.dialog.open) els.dialog.showModal();
   }
 
   function renderProductDialog(product) {
-    const statusLabel = availabilityLabel(product);
-    const details = [
-      ["Collection ID", product.id],
-      ["Fabric type", product.fabricType],
-      ["Availability", statusLabel],
-      product.pageCount ? ["Lookbook", `${product.pageCount} ${product.pageCount === 1 ? "page" : "pages"}`] : null,
-      displayRemarks(product) ? ["Notes", displayRemarks(product)] : null
-    ].filter(Boolean);
+    const thumbnails = product.images.length > 1 ? `
+      <div class="thumb-row" aria-label="Product images">
+        ${product.images.map((image, index) => `
+          <button class="thumb-button" type="button" data-image="${escapeHtml(image)}" aria-current="${index === 0 ? "true" : "false"}" aria-label="View image ${index + 1}">
+            <img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">
+          </button>
+        `).join("")}
+      </div>
+    ` : "";
 
     els.dialogContent.innerHTML = `
       <div class="dialog-grid">
         <div class="dialog-gallery">
-          <img class="dialog-main-image" id="dialogMainImage" src="${escapeHtml(product.images[0])}" alt="${escapeHtml(product.name)}">
-          <div class="thumb-row">
-            ${product.images.map((image, index) => `
-              <button class="thumb-button" type="button" data-image="${escapeHtml(image)}" aria-current="${index === 0 ? "true" : "false"}" aria-label="View product image ${index + 1}">
-                <img src="${escapeHtml(image)}" alt="">
-              </button>
-            `).join("")}
+          <div class="dialog-image-stage">
+            <img id="dialogMainImage" src="${escapeHtml(product.images[0])}" alt="${escapeHtml(product.name)}">
           </div>
+          ${thumbnails}
         </div>
         <div class="dialog-details">
-          <p class="eyebrow">${escapeHtml(product.brand)} / ${escapeHtml(product.category)}</p>
+          <p class="eyebrow">${escapeHtml(product.brand)} / ${escapeHtml(product.collectionName)}</p>
           <h2 id="dialogTitle">${escapeHtml(product.name)}</h2>
-          <div class="detail-price">${escapeHtml(displayPrice(product))}</div>
-          <p class="detail-copy">${escapeHtml(displayDescription(product))}</p>
-          <div class="detail-list">
-            ${details.map(([label, value]) => `
-              <div><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>
-            `).join("")}
-          </div>
+          <p class="product-reference">Reference ${escapeHtml(product.id)}</p>
+          <p class="dialog-meta">${escapeHtml(product.fabricType)} / ${escapeHtml(product.category)}</p>
+          <p class="detail-price">${escapeHtml(displayPrice(product))}</p>
           <div class="dialog-actions">
-            <a class="primary-link" href="${buildProductWhatsAppUrl(product)}" target="_blank" rel="noreferrer">
-              <span aria-hidden="true" class="icon-wrap" data-icon="message"></span>
-              Order on WhatsApp
+            <a class="primary-button" href="${buildProductWhatsAppUrl(product)}" target="_blank" rel="noreferrer">
+              <span class="icon-wrap" data-icon="message" aria-hidden="true"></span>
+              Enquire on WhatsApp
             </a>
-            <button class="secondary-link" type="button" data-dialog-action="copy">
-              <span aria-hidden="true" class="icon-wrap" data-icon="copy"></span>
-              Copy link
-            </button>
-            <button class="secondary-link" type="button" data-dialog-action="share">
-              <span aria-hidden="true" class="icon-wrap" data-icon="share"></span>
+            <button class="secondary-button" type="button" data-dialog-action="share">
+              <span class="icon-wrap" data-icon="share" aria-hidden="true"></span>
               Share
             </button>
-            <a class="secondary-link" href="mailto:${escapeHtml(config.email || "")}?subject=${encodeURIComponent(product.name)}&body=${encodeURIComponent(productShareText(product))}">
-              <span aria-hidden="true" class="icon-wrap" data-icon="mail"></span>
-              Email
-            </a>
           </div>
         </div>
       </div>
     `;
-
     hydrateIcons(els.dialogContent);
-    bindDialogControls(product);
   }
 
-  function bindDialogControls(product) {
-    els.dialogContent.querySelectorAll(".thumb-button").forEach((button) => {
-      button.addEventListener("click", () => {
-        els.dialogContent.querySelector("#dialogMainImage").src = button.dataset.image;
-        els.dialogContent.querySelectorAll(".thumb-button").forEach((thumb) => {
-          thumb.setAttribute("aria-current", String(thumb === button));
-        });
+  function handleDialogAction(event) {
+    const thumb = event.target.closest("button[data-image]");
+    if (thumb) {
+      const mainImage = els.dialogContent.querySelector("#dialogMainImage");
+      mainImage.src = thumb.dataset.image;
+      els.dialogContent.querySelectorAll(".thumb-button").forEach((button) => {
+        button.setAttribute("aria-current", String(button === thumb));
       });
-    });
+      return;
+    }
 
-    els.dialogContent.querySelectorAll("[data-dialog-action]").forEach((button) => {
-      button.addEventListener("click", () => {
-        if (button.dataset.dialogAction === "copy") copyProductLink(product);
-        if (button.dataset.dialogAction === "share") shareProduct(product);
-      });
-    });
-  }
-
-  function closeDialog() {
-    if (els.dialog.open) {
-      els.dialog.close();
+    const action = event.target.closest("button[data-dialog-action]");
+    if (action && action.dataset.dialogAction === "share" && currentProduct) {
+      shareProduct(currentProduct);
     }
   }
 
-  function openProductFromHash() {
-    if (!window.location.hash.startsWith("#product=")) return;
-    const slug = decodeURIComponent(window.location.hash.replace("#product=", ""));
-    const product = findProduct(slug);
-    if (!product) return;
+  function handleDialogClose() {
+    const collectionSlug = currentProduct ? currentProduct.collectionSlug : state.collectionSlug;
+    currentProduct = null;
+    if (!suppressDialogRoute && window.location.hash.startsWith("#product=") && collectionSlug) {
+      updateRoute(`#collection=${encodeURIComponent(collectionSlug)}`, "replace");
+    }
+  }
 
-    if (!currentDialogProduct || currentDialogProduct.slug !== product.slug) {
-      renderProductDialog(product);
-      currentDialogProduct = product;
+  function closeDialogForRoute() {
+    if (!els.dialog.open) return;
+    suppressDialogRoute = true;
+    els.dialog.close();
+    suppressDialogRoute = false;
+  }
+
+  function handleRoute(shouldScroll) {
+    const hash = window.location.hash;
+    if (hash.startsWith("#product=")) {
+      const product = findProduct(decodeHashValue(hash, "#product="));
+      if (product) {
+        const collection = findCollection(product.collectionSlug);
+        if (collection) showCollection(collection, shouldScroll);
+        openProduct(product, false);
+        return;
+      }
     }
 
-    if (!els.dialog.open) {
-      els.dialog.showModal();
+    closeDialogForRoute();
+    if (hash.startsWith("#collection=")) {
+      const collection = findCollection(decodeHashValue(hash, "#collection="));
+      if (collection) {
+        showCollection(collection, shouldScroll);
+        return;
+      }
     }
+
+    showCollections(shouldScroll);
+  }
+
+  function decodeHashValue(hash, prefix) {
+    try {
+      return decodeURIComponent(hash.slice(prefix.length));
+    } catch (error) {
+      return hash.slice(prefix.length);
+    }
+  }
+
+  function updateRoute(hash, mode) {
+    const url = `${window.location.pathname}${window.location.search}${hash}`;
+    try {
+      if (mode === "replace") {
+        history.replaceState(null, "", url);
+      } else {
+        history.pushState(null, "", url);
+      }
+    } catch (error) {
+      window.location.hash = hash;
+    }
+  }
+
+  function updateMenuState() {
+    els.collectionMenuList.querySelectorAll("button[data-collection]").forEach((button) => {
+      if (button.dataset.collection === state.collectionSlug) {
+        button.setAttribute("aria-current", "page");
+      } else {
+        button.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function scrollToCatalog() {
+    els.catalog.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function findCollection(slug) {
+    return collections.find((collection) => collection.slug === slug);
+  }
+
+  function findProduct(slug) {
+    return products.find((product) => product.slug === slug);
+  }
+
+  function buildProductWhatsAppUrl(product) {
+    return buildWhatsAppUrl(encodeURIComponent(productShareText(product)));
+  }
+
+  function buildWhatsAppUrl(encodedMessage) {
+    const phone = String(config.whatsappNumber || "").replace(/\D/g, "");
+    return phone ? `https://wa.me/${phone}?text=${encodedMessage}` : `https://wa.me/?text=${encodedMessage}`;
+  }
+
+  function productShareText(product) {
+    return `Hi saracreations0810, I am interested in ${product.collectionName} - ${product.name} (${product.id}). Price: ${displayPrice(product)}. Link: ${productUrl(product)}`;
+  }
+
+  function productUrl(product) {
+    return `${window.location.href.split("#")[0]}#product=${encodeURIComponent(product.slug)}`;
   }
 
   function shareProduct(product) {
     const data = {
-      title: product.name,
+      title: `${product.name} / ${product.collectionName}`,
       text: productShareText(product),
       url: productUrl(product)
     };
 
     if (navigator.share) {
-      navigator.share(data).catch(() => copyProductLink(product));
+      navigator.share(data).catch((error) => {
+        if (error.name !== "AbortError") copyProductLink(product);
+      });
       return;
     }
 
@@ -430,130 +468,18 @@
     showToast("Product link copied");
   }
 
-  function resetFilters() {
-    state.search = "";
-    state.category = "all";
-    state.brand = "all";
-    state.fabric = "all";
-    state.stock = "all";
-    state.sort = "featured";
-
-    els.search.value = "";
-    els.brand.value = "all";
-    els.fabric.value = "all";
-    els.stock.value = "all";
-    els.sort.value = "featured";
-    updateCategoryChips();
-    renderCatalog();
-  }
-
-  function updateCategoryChips() {
-    els.categoryChips.querySelectorAll("button[data-category]").forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.dataset.category === state.category));
-    });
-  }
-
-  function buildProductWhatsAppUrl(product) {
-    return buildWhatsAppUrl(encodeURIComponent(productShareText(product)));
-  }
-
-  function buildWhatsAppUrl(encodedMessage) {
-    const phone = String(config.whatsappNumber || "").replace(/\D/g, "");
-    if (phone) {
-      return `https://wa.me/${phone}?text=${encodedMessage}`;
-    }
-    return `https://wa.me/?text=${encodedMessage}`;
-  }
-
-  function productShareText(product) {
-    return `Hi saracreations0810, I am interested in ${product.name} (${product.id}). Price: ${displayPrice(product)}. Link: ${productUrl(product)}`;
-  }
-
-  function productUrl(product) {
-    const base = window.location.href.split("#")[0];
-    return `${base}#product=${encodeURIComponent(product.slug)}`;
-  }
-
-  function findProduct(slug) {
-    return products.find((product) => product.slug === slug);
-  }
-
-  function chipTemplate(value, label, pressed) {
-    return `<button class="chip" type="button" data-category="${escapeHtml(value)}" aria-pressed="${pressed ? "true" : "false"}">${escapeHtml(label)}</button>`;
-  }
-
-  function fillSelect(select, options) {
-    select.innerHTML = options.map(([value, label]) => `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`).join("");
-  }
-
-  function unique(values) {
-    return Array.from(new Set(values.filter(Boolean))).sort((a, b) => String(a).localeCompare(String(b)));
-  }
-
-  function formatPrice(amount) {
-    return `Rs. ${new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(amount)}`;
-  }
-
   function displayPrice(product) {
     if (product.priceLabel) return product.priceLabel;
     if (!product.price) return "Contact for price";
-    return formatPrice(product.price);
-  }
-
-  function featuredMeta(product) {
-    if (product.pageCount) {
-      return `${product.brand} / ${product.pageCount} ${product.pageCount === 1 ? "page" : "pages"}`;
-    }
-    return displayPrice(product);
-  }
-
-  function availabilityLabel(product) {
-    if (product.pageCount && product.stock > 0) return "Available to enquire";
-    if (product.stock > 0) return `${product.stock} in stock`;
-    return "Unavailable";
-  }
-
-  function availabilityClass(product) {
-    if (product.pageCount && product.stock > 0) return "catalog";
-    return product.stock > 0 ? "available" : "out";
-  }
-
-  function displayDescription(product) {
-    if (product.pageCount) {
-      return `${product.name} lookbook with ${product.pageCount} ${product.pageCount === 1 ? "page" : "pages"}. Contact saracreations0810 on WhatsApp for exact price, availability, and piece details.`;
-    }
-    return product.description || "Contact saracreations0810 for current price, availability, and order details.";
-  }
-
-  function displayRemarks(product) {
-    if (!product.remarks) return "";
-    if (/pdf catalog import|replace price\/stock/i.test(product.remarks)) {
-      return "Contact for current price, stock, and dispatch details.";
-    }
-    return product.remarks;
-  }
-
-  function sortablePrice(product, emptyPosition) {
-    if (!product.price || product.priceLabel) {
-      return emptyPosition === "high" ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY;
-    }
-    return product.price;
-  }
-
-  function comparePrices(a, b, direction) {
-    const emptyPosition = direction === "low" ? "high" : "low";
-    const priceA = sortablePrice(a, emptyPosition);
-    const priceB = sortablePrice(b, emptyPosition);
-
-    if (priceA === priceB) return products.indexOf(a) - products.indexOf(b);
-    if (priceA === Number.POSITIVE_INFINITY || priceA === Number.NEGATIVE_INFINITY) return 1;
-    if (priceB === Number.POSITIVE_INFINITY || priceB === Number.NEGATIVE_INFINITY) return -1;
-
-    return direction === "low" ? priceA - priceB : priceB - priceA;
+    return `Rs. ${new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(product.price)}`;
   }
 
   function formatNumber(value) {
     return new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(value);
+  }
+
+  function plural(value, word) {
+    return value === 1 ? word : `${word}s`;
   }
 
   function escapeHtml(value) {
@@ -569,8 +495,6 @@
     window.clearTimeout(toastTimer);
     els.toast.textContent = message;
     els.toast.classList.add("is-visible");
-    toastTimer = window.setTimeout(() => {
-      els.toast.classList.remove("is-visible");
-    }, 2200);
+    toastTimer = window.setTimeout(() => els.toast.classList.remove("is-visible"), 2200);
   }
 })();

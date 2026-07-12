@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="saracreations0810 catalog for premium Pakistani and Indian designer collections.">
-    <title>saracreations0810 | Collections Catalog</title>
+    <meta name="description" content="Browse separate designs from Pakistani and Indian designer collections at saracreations0810.">
+    <title>saracreations0810 | Designer Collections</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <script src="products.js" defer></script>
@@ -14,164 +14,125 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#catalog" aria-label="saracreations0810 home">
-        <img src="assets/logo.svg" alt="" width="44" height="44">
+        <img src="assets/logo.svg" alt="" width="40" height="40">
         <span>
           <strong>saracreations0810</strong>
-          <small>Designer collections</small>
+          <small>Designer wear</small>
         </span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#catalog">Collections</a>
-        <a href="#featured">Lookbooks</a>
-        <a href="#contact">Contact</a>
+
+      <nav class="header-nav" aria-label="Primary navigation">
+        <details class="collection-menu" id="collectionMenu">
+          <summary>
+            Collections
+            <span class="icon-wrap menu-chevron" data-icon="chevron-down" aria-hidden="true"></span>
+          </summary>
+          <div class="collection-menu-panel">
+            <div class="menu-heading">
+              <strong>Collections</strong>
+              <span id="menuCollectionCount"></span>
+            </div>
+            <div class="collection-menu-list" id="collectionMenuList"></div>
+          </div>
+        </details>
+        <a class="nav-contact" href="#contact">Contact</a>
       </nav>
-      <a class="header-action" id="headerWhatsApp" href="#" target="_blank" rel="noreferrer">
-        <span aria-hidden="true" class="icon-wrap" data-icon="message"></span>
-        Order
+
+      <a class="header-action" id="headerWhatsApp" href="#" target="_blank" rel="noreferrer" aria-label="Order on WhatsApp" title="WhatsApp">
+        <span class="icon-wrap" data-icon="message" aria-hidden="true"></span>
+        <span class="header-action-label">Order</span>
       </a>
     </header>
 
     <main>
-      <section class="intro-band" aria-labelledby="introTitle">
-        <div class="intro-copy">
-          <p class="eyebrow">Pakistani and Indian designer collections</p>
-          <h1 id="introTitle">saracreations0810 catalog</h1>
-          <p>Browse current lawn, chiffon, festive, and everyday collections. Ask for exact price, stock, and ordering details on WhatsApp.</p>
-          <div class="intro-actions">
-            <a class="primary-link" href="#catalog">
-              <span aria-hidden="true" class="icon-wrap" data-icon="grid"></span>
-              View collections
-            </a>
-            <a class="secondary-link" href="#contact">
-              <span aria-hidden="true" class="icon-wrap" data-icon="mail"></span>
-              Contact
-            </a>
-          </div>
-          <div class="intro-metrics" aria-label="Catalog summary">
+      <section class="catalog-shell" id="catalog" aria-labelledby="pageTitle">
+        <header class="catalog-intro" id="catalogIntro">
+          <p class="eyebrow">Pakistani and Indian designer wear</p>
+          <h1 id="pageTitle">saracreations0810</h1>
+          <p>Curated lawn, chiffon, and festive collections.</p>
+        </header>
+
+        <section class="catalog-view" id="collectionsView" aria-labelledby="collectionsTitle">
+          <div class="view-heading">
             <div>
-              <strong id="collectionCount">0</strong>
-              <span>Collections</span>
+              <h2 id="collectionsTitle">All collections</h2>
+              <p class="result-count" id="collectionResultCount"></p>
             </div>
+            <label class="search-field" aria-label="Search collections">
+              <span class="icon-wrap" data-icon="search" aria-hidden="true"></span>
+              <input id="collectionSearch" type="search" placeholder="Search collections" autocomplete="off">
+            </label>
+          </div>
+
+          <div class="collection-grid" id="collectionGrid" aria-live="polite"></div>
+          <div class="empty-state" id="collectionEmpty" hidden>
+            <h3>No collections found</h3>
+            <button class="text-button" id="clearCollectionSearch" type="button">Clear search</button>
+          </div>
+        </section>
+
+        <section class="catalog-view" id="collectionView" aria-labelledby="selectedCollectionTitle" hidden>
+          <button class="back-button" id="allCollectionsButton" type="button">
+            <span class="icon-wrap" data-icon="arrow-left" aria-hidden="true"></span>
+            All collections
+          </button>
+
+          <div class="selected-heading">
             <div>
-              <strong id="brandCount">0</strong>
-              <span>Brands</span>
+              <p class="eyebrow" id="selectedCollectionEyebrow"></p>
+              <h2 id="selectedCollectionTitle" tabindex="-1"></h2>
+              <p class="collection-meta" id="selectedCollectionMeta"></p>
             </div>
-            <div>
-              <strong id="categoryCount">0</strong>
-              <span>Categories</span>
-            </div>
+            <p class="result-count" id="designResultCount"></p>
           </div>
-        </div>
-        <div class="collection-preview" aria-hidden="true">
-          <img class="preview-large" src="assets/products/belle-saison-by-esmel-p1.jpg" alt="">
-          <img src="assets/products/noors-lehr-luxury-chiffon-2025-p1.jpg" alt="">
-          <img src="assets/products/ramsha-riwayat-luxury-lawn-vol-15-p1.jpg" alt="">
-          <img src="assets/products/zaha-festive-lawn-26-p1.jpg" alt="">
-        </div>
-      </section>
 
-      <section class="catalog-section" id="catalog" aria-labelledby="catalogTitle">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Current catalog</p>
-            <h2 id="catalogTitle">Collections</h2>
+          <div class="design-toolbar">
+            <label class="search-field" aria-label="Search designs">
+              <span class="icon-wrap" data-icon="search" aria-hidden="true"></span>
+              <input id="designSearch" type="search" placeholder="Search designs or references" autocomplete="off">
+            </label>
           </div>
-          <p id="resultCount" class="result-count">0 collections</p>
-        </div>
 
-        <div class="catalog-layout">
-          <aside class="filters" aria-label="Collection filters">
-            <label class="search-field">
-              <span aria-hidden="true" class="icon-wrap" data-icon="search"></span>
-              <input id="searchInput" type="search" placeholder="Search collections, brands, categories" autocomplete="off">
-            </label>
-
-            <div class="filter-group">
-              <span class="filter-label">Category</span>
-              <div class="chip-row" id="categoryChips"></div>
-            </div>
-
-            <label class="field">
-              <span>Brand</span>
-              <select id="brandFilter"></select>
-            </label>
-
-            <label class="field">
-              <span>Fabric type</span>
-              <select id="fabricFilter"></select>
-            </label>
-
-            <label class="field">
-              <span>Availability</span>
-              <select id="stockFilter">
-                <option value="all">All collections</option>
-                <option value="available">Available to enquire</option>
-                <option value="out">Unavailable</option>
-              </select>
-            </label>
-
-            <label class="field">
-              <span>Sort</span>
-              <select id="sortFilter">
-                <option value="featured">Featured first</option>
-                <option value="newest">Recently added</option>
-                <option value="brand">Brand A-Z</option>
-                <option value="pages">Largest lookbooks</option>
-                <option value="price-low">Price low to high</option>
-                <option value="price-high">Price high to low</option>
-              </select>
-            </label>
-          </aside>
-
-          <div class="product-area">
-            <div class="featured-strip" id="featured" aria-label="Featured collections">
-              <div>
-                <p class="eyebrow">Lookbooks</p>
-                <h3>Featured collections</h3>
-              </div>
-              <div id="featuredList" class="featured-list"></div>
-            </div>
-
-            <div class="product-grid" id="productGrid" aria-live="polite"></div>
-            <div class="empty-state" id="emptyState" hidden>
-              <h3>No collections found</h3>
-              <p>Try a different search or clear one of the filters.</p>
-              <button class="text-button" id="clearFilters" type="button">Clear filters</button>
-            </div>
+          <div class="product-grid" id="productGrid" aria-live="polite"></div>
+          <div class="empty-state" id="productEmpty" hidden>
+            <h3>No designs found</h3>
+            <button class="text-button" id="clearDesignSearch" type="button">Clear search</button>
           </div>
-        </div>
+        </section>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contactTitle">
-        <div>
-          <p class="eyebrow">Orders and enquiries</p>
-          <h2 id="contactTitle">Contact saracreations0810</h2>
-        </div>
-        <div class="contact-actions">
-          <a id="contactWhatsApp" class="contact-button" href="#" target="_blank" rel="noreferrer">
-            <span aria-hidden="true" class="icon-wrap" data-icon="message"></span>
-            WhatsApp
-          </a>
-          <a class="contact-button" href="mailto:saracreations0810@gmail.com">
-            <span aria-hidden="true" class="icon-wrap" data-icon="mail"></span>
-            Email
-          </a>
-          <a id="instagramLink" class="contact-button" href="#" target="_blank" rel="noreferrer">
-            <span aria-hidden="true" class="icon-wrap" data-icon="instagram"></span>
-            Instagram
-          </a>
+        <div class="contact-inner">
+          <div>
+            <p class="eyebrow">Orders and enquiries</p>
+            <h2 id="contactTitle">Contact saracreations0810</h2>
+          </div>
+          <div class="contact-actions">
+            <a id="contactWhatsApp" class="contact-button contact-primary" href="#" target="_blank" rel="noreferrer">
+              <span class="icon-wrap" data-icon="message" aria-hidden="true"></span>
+              WhatsApp
+            </a>
+            <a class="contact-button" href="mailto:saracreations0810@gmail.com">
+              <span class="icon-wrap" data-icon="mail" aria-hidden="true"></span>
+              Email
+            </a>
+            <a id="instagramLink" class="contact-button" href="#" target="_blank" rel="noreferrer">
+              <span class="icon-wrap" data-icon="instagram" aria-hidden="true"></span>
+              Instagram
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>saracreations0810</span>
-      <span>Designer collections catalog</span>
+      <strong>saracreations0810</strong>
+      <span>Designer collections</span>
     </footer>
 
     <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
-      <button class="icon-button close-dialog" id="closeDialog" type="button" aria-label="Close collection details" title="Close">
-        <span aria-hidden="true" class="icon-wrap" data-icon="x"></span>
+      <button class="icon-button close-dialog" id="closeDialog" type="button" aria-label="Close product details" title="Close">
+        <span class="icon-wrap" data-icon="x" aria-hidden="true"></span>
       </button>
       <div id="dialogContent"></div>
     </dialog>

@@ -1,17 +1,17 @@
-# saracreations0810 Static Catalog
+# saracreations0810 Collection Catalog
 
 This is a simple, free-hosting-ready clothing catalog for saracreations0810.
 
 ## What It Includes
 
-- Responsive collections catalog
-- Search, category, brand, fabric type, stock, and sort filters
-- Featured collections
-- Collection detail popup with gallery
+- Collection-first browsing with a header collection menu
+- Separate product cards inside every collection
+- Responsive collection and product search
+- Multi-image product galleries for detailed lookbooks
 - WhatsApp order links
-- Copy/share collection links
+- Shareable product links
 - Email and Instagram contact links
-- Imported PDF catalogue image previews
+- Product images imported from PDF catalogues
 
 ## How To Edit The Catalog
 
@@ -32,13 +32,15 @@ For WhatsApp direct ordering, add the phone number with country code and no plus
 whatsappNumber: "919876543210"
 ```
 
-The current collections are loaded from `pdf-products.js`, which was generated from PDFs in `product-pdfs/` and preview images in `assets/products/`.
+The current catalog is loaded from `pdf-products.js`. It contains separate collection and product records generated from PDFs in `product-pdfs/`, with product images in `assets/products/`.
 
-Manual collections can also be added in `products.js` by appending items to `window.SARA_PRODUCTS`. Each collection can use one or more images:
+The importer groups repeated pages from the same design into one product gallery and keeps one-page product sheets separate. Run it after adding or replacing source PDFs:
 
-```js
-images: ["assets/your-product-photo-1.jpg", "assets/your-product-photo-2.jpg"]
+```bash
+python3 scripts/import_product_pdfs.py
 ```
+
+When adding a new PDF, add its collection name, page groups, and product references to `COLLECTION_SPECS` in `scripts/import_product_pdfs.py`, then run the importer.
 
 ## Open Locally
 
