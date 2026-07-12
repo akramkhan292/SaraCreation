@@ -1,0 +1,5 @@
+product-pdfs/
+tmp/
+generated-pdf-products.json
+.DS_Store
+scripts/__pycache__/

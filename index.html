@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="saracreations0810 clothing catalog for premium Pakistani and Indian stitched and un-stitched fabrics.">
-    <title>saracreations0810 | Clothing Catalog</title>
+    <meta name="description" content="saracreations0810 catalog for premium Pakistani and Indian designer collections.">
+    <title>saracreations0810 | Collections Catalog</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <script src="products.js" defer></script>
@@ -17,12 +17,12 @@
         <img src="assets/logo.svg" alt="" width="44" height="44">
         <span>
           <strong>saracreations0810</strong>
-          <small>Premium clothing catalog</small>
+          <small>Designer collections</small>
         </span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#catalog">Catalog</a>
-        <a href="#featured">Featured</a>
+        <a href="#catalog">Collections</a>
+        <a href="#featured">Lookbooks</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="header-action" id="headerWhatsApp" href="#" target="_blank" rel="noreferrer">
@@ -34,39 +34,56 @@
     <main>
       <section class="intro-band" aria-labelledby="introTitle">
         <div class="intro-copy">
-          <p class="eyebrow">Stitched and un-stitched collections</p>
-          <h1 id="introTitle">Browse premium Pakistani and Indian fabrics.</h1>
-          <p>Explore lawn, cotton, party wear, two piece, and co-ord sets with quick WhatsApp ordering.</p>
+          <p class="eyebrow">Pakistani and Indian designer collections</p>
+          <h1 id="introTitle">saracreations0810 catalog</h1>
+          <p>Browse current lawn, chiffon, festive, and everyday collections. Ask for exact price, stock, and ordering details on WhatsApp.</p>
           <div class="intro-actions">
             <a class="primary-link" href="#catalog">
               <span aria-hidden="true" class="icon-wrap" data-icon="grid"></span>
-              Shop catalog
+              View collections
             </a>
             <a class="secondary-link" href="#contact">
               <span aria-hidden="true" class="icon-wrap" data-icon="mail"></span>
               Contact
             </a>
           </div>
+          <div class="intro-metrics" aria-label="Catalog summary">
+            <div>
+              <strong id="collectionCount">0</strong>
+              <span>Collections</span>
+            </div>
+            <div>
+              <strong id="brandCount">0</strong>
+              <span>Brands</span>
+            </div>
+            <div>
+              <strong id="categoryCount">0</strong>
+              <span>Categories</span>
+            </div>
+          </div>
         </div>
-        <div class="intro-media" aria-hidden="true">
-          <img src="assets/fabric-hero.svg" alt="">
+        <div class="collection-preview" aria-hidden="true">
+          <img class="preview-large" src="assets/products/belle-saison-by-esmel-p1.jpg" alt="">
+          <img src="assets/products/noors-lehr-luxury-chiffon-2025-p1.jpg" alt="">
+          <img src="assets/products/ramsha-riwayat-luxury-lawn-vol-15-p1.jpg" alt="">
+          <img src="assets/products/zaha-festive-lawn-26-p1.jpg" alt="">
         </div>
       </section>
 
       <section class="catalog-section" id="catalog" aria-labelledby="catalogTitle">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Live catalog</p>
-            <h2 id="catalogTitle">Products</h2>
+            <p class="eyebrow">Current catalog</p>
+            <h2 id="catalogTitle">Collections</h2>
           </div>
-          <p id="resultCount" class="result-count">0 products</p>
+          <p id="resultCount" class="result-count">0 collections</p>
         </div>
 
         <div class="catalog-layout">
-          <aside class="filters" aria-label="Product filters">
+          <aside class="filters" aria-label="Collection filters">
             <label class="search-field">
               <span aria-hidden="true" class="icon-wrap" data-icon="search"></span>
-              <input id="searchInput" type="search" placeholder="Search products, brands, tags" autocomplete="off">
+              <input id="searchInput" type="search" placeholder="Search collections, brands, categories" autocomplete="off">
             </label>
 
             <div class="filter-group">
@@ -87,9 +104,9 @@
             <label class="field">
               <span>Availability</span>
               <select id="stockFilter">
-                <option value="all">All products</option>
-                <option value="available">Available only</option>
-                <option value="out">Out of stock</option>
+                <option value="all">All collections</option>
+                <option value="available">Available to enquire</option>
+                <option value="out">Unavailable</option>
               </select>
             </label>
 
@@ -97,26 +114,27 @@
               <span>Sort</span>
               <select id="sortFilter">
                 <option value="featured">Featured first</option>
-                <option value="newest">Newest</option>
+                <option value="newest">Recently added</option>
+                <option value="brand">Brand A-Z</option>
+                <option value="pages">Largest lookbooks</option>
                 <option value="price-low">Price low to high</option>
                 <option value="price-high">Price high to low</option>
-                <option value="stock">Stock quantity</option>
               </select>
             </label>
           </aside>
 
           <div class="product-area">
-            <div class="featured-strip" id="featured" aria-label="Featured products">
+            <div class="featured-strip" id="featured" aria-label="Featured collections">
               <div>
-                <p class="eyebrow">Featured</p>
-                <h3>Ready for sharing</h3>
+                <p class="eyebrow">Lookbooks</p>
+                <h3>Featured collections</h3>
               </div>
               <div id="featuredList" class="featured-list"></div>
             </div>
 
             <div class="product-grid" id="productGrid" aria-live="polite"></div>
             <div class="empty-state" id="emptyState" hidden>
-              <h3>No products found</h3>
+              <h3>No collections found</h3>
               <p>Try a different search or clear one of the filters.</p>
               <button class="text-button" id="clearFilters" type="button">Clear filters</button>
             </div>
@@ -148,11 +166,11 @@
 
     <footer class="site-footer">
       <span>saracreations0810</span>
-      <span>Static catalog - free-hosting ready</span>
+      <span>Designer collections catalog</span>
     </footer>
 
     <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
-      <button class="icon-button close-dialog" id="closeDialog" type="button" aria-label="Close product details" title="Close">
+      <button class="icon-button close-dialog" id="closeDialog" type="button" aria-label="Close collection details" title="Close">
         <span aria-hidden="true" class="icon-wrap" data-icon="x"></span>
       </button>
       <div id="dialogContent"></div>

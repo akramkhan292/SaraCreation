@@ -36,6 +36,7 @@
     hydrateIcons(document);
     setupStaticLinks();
     setupFilters();
+    renderCatalogSummary();
     bindEvents();
     renderFeatured();
     renderCatalog();
@@ -53,6 +54,10 @@
     els.empty = document.getElementById("emptyState");
     els.clear = document.getElementById("clearFilters");
     els.count = document.getElementById("resultCount");
+    els.collectionCount = document.getElementById("collectionCount");
+    els.brandCount = document.getElementById("brandCount");
+    els.categoryCount = document.getElementById("categoryCount");
+    els.featuredStrip = document.getElementById("featured");
     els.featured = document.getElementById("featuredList");
     els.dialog = document.getElementById("productDialog");
     els.dialogContent = document.getElementById("dialogContent");
@@ -143,12 +148,18 @@
 
   function renderFeatured() {
     const featured = products.filter((product) => product.featured).slice(0, 4);
+    if (!featured.length) {
+      els.featuredStrip.hidden = true;
+      return;
+    }
+
+    els.featuredStrip.hidden = false;
     els.featured.innerHTML = featured.map((product) => `
       <button class="featured-item" type="button" data-slug="${escapeHtml(product.slug)}">
         <img src="${escapeHtml(product.images[0])}" alt="">
         <span>
           <strong>${escapeHtml(product.name)}</strong>
-          <small>${displayPrice(product)}</small>
+          <small>${escapeHtml(featuredMeta(product))}</small>
         </span>
       </button>
     `).join("");
@@ -156,11 +167,19 @@
 
   function renderCatalog() {
     const filtered = getFilteredProducts();
-    els.count.textContent = `${filtered.length} ${filtered.length === 1 ? "product" : "products"}`;
+    els.count.textContent = `${formatNumber(filtered.length)} ${filtered.length === 1 ? "collection" : "collections"}`;
     els.empty.hidden = filtered.length > 0;
     els.grid.hidden = filtered.length === 0;
     els.grid.innerHTML = filtered.map(productCardTemplate).join("");
     hydrateIcons(els.grid);
+  }
+
+  function renderCatalogSummary() {
+    if (!els.collectionCount) return;
+
+    els.collectionCount.textContent = formatNumber(products.length);
+    els.brandCount.textContent = formatNumber(unique(products.map((product) => product.brand)).length);
+    els.categoryCount.textContent = formatNumber(unique(products.map((product) => product.category)).length);
   }
 
   function getFilteredProducts() {
@@ -173,7 +192,7 @@
           product.fabricType,
           product.description,
           product.remarks,
-          product.tags.join(" ")
+          (product.tags || []).join(" ")
         ].join(" ").toLowerCase();
 
         const matchesSearch = !state.search || text.includes(state.search);
@@ -191,16 +210,23 @@
   }
 
   function sortProducts(a, b) {
-    if (state.sort === "price-low") return sortablePrice(a, "high") - sortablePrice(b, "high");
-    if (state.sort === "price-high") return sortablePrice(b, "low") - sortablePrice(a, "low");
+    if (state.sort === "price-low") return comparePrices(a, b, "low");
+    if (state.sort === "price-high") return comparePrices(a, b, "high");
+    if (state.sort === "brand") return a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name);
+    if (state.sort === "pages") return (b.pageCount || 0) - (a.pageCount || 0) || a.name.localeCompare(b.name);
     if (state.sort === "stock") return b.stock - a.stock;
     if (state.sort === "newest") return products.indexOf(b) - products.indexOf(a);
     return Number(b.featured) - Number(a.featured) || products.indexOf(a) - products.indexOf(b);
   }
 
   function productCardTemplate(product) {
-    const statusClass = product.stock > 0 ? "available" : "out";
-    const statusLabel = product.stock > 0 ? `${product.stock} in stock` : "Out of stock";
+    const statusClass = availabilityClass(product);
+    const statusLabel = availabilityLabel(product);
+    const meta = [
+      product.brand,
+      product.fabricType,
+      product.pageCount ? `${product.pageCount} ${product.pageCount === 1 ? "page" : "pages"}` : ""
+    ].filter(Boolean);
 
     return `
       <article class="product-card">
@@ -208,17 +234,16 @@
           <img src="${escapeHtml(product.images[0])}" alt="${escapeHtml(product.name)}">
           <div class="badge-row">
             <span class="badge">${escapeHtml(product.category)}</span>
-            <span class="status ${statusClass}">${statusLabel}</span>
+            <span class="status ${statusClass}">${escapeHtml(statusLabel)}</span>
           </div>
         </div>
         <div class="product-info">
           <div class="product-title-row">
             <strong>${escapeHtml(product.name)}</strong>
-            <span class="price">${displayPrice(product)}</span>
+            <span class="price">${escapeHtml(displayPrice(product))}</span>
           </div>
           <div class="meta">
-            <span>${escapeHtml(product.brand)}</span>
-            <span>${escapeHtml(product.fabricType)}</span>
+            ${meta.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
           </div>
           <div class="product-actions">
             <button class="view-button" type="button" data-action="view" data-slug="${escapeHtml(product.slug)}">
@@ -274,7 +299,15 @@
   }
 
   function renderProductDialog(product) {
-    const statusLabel = product.stock > 0 ? `${product.stock} in stock` : "Out of stock";
+    const statusLabel = availabilityLabel(product);
+    const details = [
+      ["Collection ID", product.id],
+      ["Fabric type", product.fabricType],
+      ["Availability", statusLabel],
+      product.pageCount ? ["Lookbook", `${product.pageCount} ${product.pageCount === 1 ? "page" : "pages"}`] : null,
+      displayRemarks(product) ? ["Notes", displayRemarks(product)] : null
+    ].filter(Boolean);
+
     els.dialogContent.innerHTML = `
       <div class="dialog-grid">
         <div class="dialog-gallery">
@@ -290,13 +323,12 @@
         <div class="dialog-details">
           <p class="eyebrow">${escapeHtml(product.brand)} / ${escapeHtml(product.category)}</p>
           <h2 id="dialogTitle">${escapeHtml(product.name)}</h2>
-          <div class="detail-price">${displayPrice(product)}</div>
-          <p class="detail-copy">${escapeHtml(product.description)}</p>
+          <div class="detail-price">${escapeHtml(displayPrice(product))}</div>
+          <p class="detail-copy">${escapeHtml(displayDescription(product))}</p>
           <div class="detail-list">
-            <div><span>Product ID</span><strong>${escapeHtml(product.id)}</strong></div>
-            <div><span>Fabric type</span><strong>${escapeHtml(product.fabricType)}</strong></div>
-            <div><span>Availability</span><strong>${escapeHtml(statusLabel)}</strong></div>
-            <div><span>Remarks</span><strong>${escapeHtml(product.remarks)}</strong></div>
+            ${details.map(([label, value]) => `
+              <div><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>
+            `).join("")}
           </div>
           <div class="dialog-actions">
             <a class="primary-link" href="${buildProductWhatsAppUrl(product)}" target="_blank" rel="noreferrer">
@@ -434,7 +466,7 @@
   }
 
   function productShareText(product) {
-    return `Hi saracreations0810, I am interested in ${product.name} (${product.id}) priced at ${displayPrice(product)}. Link: ${productUrl(product)}`;
+    return `Hi saracreations0810, I am interested in ${product.name} (${product.id}). Price: ${displayPrice(product)}. Link: ${productUrl(product)}`;
   }
 
   function productUrl(product) {
@@ -455,7 +487,7 @@
   }
 
   function unique(values) {
-    return Array.from(new Set(values)).sort((a, b) => a.localeCompare(b));
+    return Array.from(new Set(values.filter(Boolean))).sort((a, b) => String(a).localeCompare(String(b)));
   }
 
   function formatPrice(amount) {
@@ -464,7 +496,41 @@
 
   function displayPrice(product) {
     if (product.priceLabel) return product.priceLabel;
+    if (!product.price) return "Contact for price";
     return formatPrice(product.price);
+  }
+
+  function featuredMeta(product) {
+    if (product.pageCount) {
+      return `${product.brand} / ${product.pageCount} ${product.pageCount === 1 ? "page" : "pages"}`;
+    }
+    return displayPrice(product);
+  }
+
+  function availabilityLabel(product) {
+    if (product.pageCount && product.stock > 0) return "Available to enquire";
+    if (product.stock > 0) return `${product.stock} in stock`;
+    return "Unavailable";
+  }
+
+  function availabilityClass(product) {
+    if (product.pageCount && product.stock > 0) return "catalog";
+    return product.stock > 0 ? "available" : "out";
+  }
+
+  function displayDescription(product) {
+    if (product.pageCount) {
+      return `${product.name} lookbook with ${product.pageCount} ${product.pageCount === 1 ? "page" : "pages"}. Contact saracreations0810 on WhatsApp for exact price, availability, and piece details.`;
+    }
+    return product.description || "Contact saracreations0810 for current price, availability, and order details.";
+  }
+
+  function displayRemarks(product) {
+    if (!product.remarks) return "";
+    if (/pdf catalog import|replace price\/stock/i.test(product.remarks)) {
+      return "Contact for current price, stock, and dispatch details.";
+    }
+    return product.remarks;
   }
 
   function sortablePrice(product, emptyPosition) {
@@ -472,6 +538,22 @@
       return emptyPosition === "high" ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY;
     }
     return product.price;
+  }
+
+  function comparePrices(a, b, direction) {
+    const emptyPosition = direction === "low" ? "high" : "low";
+    const priceA = sortablePrice(a, emptyPosition);
+    const priceB = sortablePrice(b, emptyPosition);
+
+    if (priceA === priceB) return products.indexOf(a) - products.indexOf(b);
+    if (priceA === Number.POSITIVE_INFINITY || priceA === Number.NEGATIVE_INFINITY) return 1;
+    if (priceB === Number.POSITIVE_INFINITY || priceB === Number.NEGATIVE_INFINITY) return -1;
+
+    return direction === "low" ? priceA - priceB : priceB - priceA;
+  }
+
+  function formatNumber(value) {
+    return new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(value);
   }
 
   function escapeHtml(value) {

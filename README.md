@@ -4,20 +4,18 @@ This is a simple, free-hosting-ready clothing catalog for saracreations0810.
 
 ## What It Includes
 
-- Responsive product catalog
+- Responsive collections catalog
 - Search, category, brand, fabric type, stock, and sort filters
-- Featured products
-- Product detail popup with gallery
+- Featured collections
+- Collection detail popup with gallery
 - WhatsApp order links
-- Copy/share product links
+- Copy/share collection links
 - Email and Instagram contact links
-- Local sample product visuals
+- Imported PDF catalogue image previews
 
-## How To Edit Products
+## How To Edit The Catalog
 
-Edit products in `products.js`.
-
-Update these fields first:
+Contact and social settings live in `products.js`:
 
 ```js
 window.SARA_CONFIG = {
@@ -34,13 +32,13 @@ For WhatsApp direct ordering, add the phone number with country code and no plus
 whatsappNumber: "919876543210"
 ```
 
-Each product can use one or more images:
+The current collections are loaded from `pdf-products.js`, which was generated from PDFs in `product-pdfs/` and preview images in `assets/products/`.
+
+Manual collections can also be added in `products.js` by appending items to `window.SARA_PRODUCTS`. Each collection can use one or more images:
 
 ```js
 images: ["assets/your-product-photo-1.jpg", "assets/your-product-photo-2.jpg"]
 ```
-
-Replace the sample SVG images in `assets/` with real product photos when available.
 
 ## Open Locally
 

@@ -187,10 +187,10 @@ main {
 
 .intro-band {
   display: grid;
-  grid-template-columns: minmax(0, .88fr) minmax(340px, 1.12fr);
+  grid-template-columns: minmax(0, .82fr) minmax(340px, 1.18fr);
   gap: clamp(20px, 4vw, 52px);
   align-items: center;
-  min-height: calc(100svh - 76px);
+  min-height: min(680px, calc(100svh - 132px));
   max-width: 1440px;
   margin: 0 auto;
   padding: clamp(28px, 5vw, 62px) clamp(16px, 4vw, 48px) clamp(24px, 4vw, 48px);
@@ -225,9 +225,9 @@ h3 {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 14ch;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.45rem, 6vw, 5.75rem);
+  font-size: clamp(2.45rem, 5.4vw, 5rem);
 }
 
 h2 {
@@ -254,20 +254,61 @@ h3 {
   margin-top: 24px;
 }
 
-.intro-media {
-  position: relative;
-  min-height: 340px;
+.intro-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 540px;
+  margin-top: clamp(24px, 4vw, 36px);
+}
+
+.intro-metrics div {
+  min-height: 74px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  padding: 12px 14px;
+  border-top: 2px solid var(--teal);
+  background: rgba(255, 253, 248, .72);
+}
+
+.intro-metrics strong,
+.intro-metrics span {
+  display: block;
+}
+
+.intro-metrics strong {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1;
+}
+
+.intro-metrics span {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.collection-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  grid-template-rows: repeat(2, minmax(170px, 1fr));
+  gap: 12px;
+  min-height: 460px;
+}
+
+.collection-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: 0 16px 38px rgba(27, 23, 21, .14);
   background: var(--cream);
 }
 
-.intro-media img {
-  width: 100%;
-  height: 100%;
-  min-height: 340px;
-  object-fit: cover;
+.collection-preview .preview-large {
+  grid-row: span 2;
 }
 
 .catalog-section,
@@ -451,7 +492,7 @@ select {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
 }
 
@@ -509,6 +550,11 @@ select {
 .status.available {
   background: rgba(31, 81, 71, .92);
   color: #fff;
+}
+
+.status.catalog {
+  background: rgba(214, 181, 95, .94);
+  color: var(--ink);
 }
 
 .status.out {
@@ -808,6 +854,10 @@ select {
     min-height: auto;
   }
 
+  .collection-preview {
+    min-height: 390px;
+  }
+
   h1 {
     max-width: 100%;
   }
@@ -847,6 +897,36 @@ select {
 
   .header-action {
     padding: 0 12px;
+  }
+
+  .intro-metrics {
+    gap: 8px;
+  }
+
+  .intro-metrics div {
+    min-height: 66px;
+    padding: 10px 8px;
+  }
+
+  .intro-metrics span {
+    font-size: .66rem;
+  }
+
+  .collection-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    min-height: 0;
+    gap: 8px;
+  }
+
+  .collection-preview .preview-large {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    aspect-ratio: 16 / 11;
+  }
+
+  .collection-preview img:not(.preview-large) {
+    aspect-ratio: 1 / 1.18;
   }
 
   .intro-actions,
