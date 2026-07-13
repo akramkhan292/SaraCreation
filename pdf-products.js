@@ -180,8 +180,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p1.jpg",
@@ -201,8 +199,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p2.jpg",
@@ -222,8 +218,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p3.jpg",
@@ -243,8 +237,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p4.jpg",
@@ -264,8 +256,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p5.jpg",
@@ -285,8 +275,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p6.jpg",
@@ -306,8 +294,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p7.jpg",
@@ -327,8 +313,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p8.jpg",
@@ -348,8 +332,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p9.jpg",
@@ -369,8 +351,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p10.jpg",
@@ -390,8 +370,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p11.jpg",
@@ -411,8 +389,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p12.jpg",
@@ -432,8 +408,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p13.jpg",
@@ -453,8 +427,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p14.jpg",
@@ -474,8 +446,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p15.jpg",
@@ -495,8 +465,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-bridgerton-lookbook-26-p16.jpg",
@@ -516,8 +484,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p3.jpg",
@@ -537,8 +503,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p7.jpg",
@@ -558,8 +522,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p11.jpg",
@@ -579,8 +541,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p15.jpg",
@@ -600,8 +560,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p19.jpg",
@@ -621,8 +579,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p23.jpg",
@@ -642,8 +598,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p27.jpg",
@@ -663,8 +617,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p31.jpg",
@@ -684,8 +636,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p35.jpg",
@@ -705,8 +655,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p39.jpg",
@@ -726,8 +674,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p43.jpg",
@@ -747,8 +693,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p47.jpg",
@@ -768,8 +712,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p51.jpg",
@@ -789,8 +731,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Elaf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/elaf-luxury-vol-ii-26-digital-catalog-p55.jpg",
@@ -810,8 +750,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p1.jpg"
@@ -828,8 +766,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p2.jpg"
@@ -846,8 +782,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p3.jpg"
@@ -864,8 +798,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p4.jpg"
@@ -882,8 +814,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p5.jpg"
@@ -900,8 +830,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p6.jpg"
@@ -918,8 +846,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p7.jpg"
@@ -936,8 +862,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p8.jpg"
@@ -954,8 +878,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p9.jpg"
@@ -972,8 +894,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p10.jpg"
@@ -990,8 +910,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p11.jpg"
@@ -1008,8 +926,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Esmel",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/belle-saison-by-esmel-p12.jpg"
@@ -1026,8 +942,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p1.jpg"
@@ -1044,8 +958,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p2.jpg"
@@ -1062,8 +974,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p3.jpg"
@@ -1080,8 +990,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p4.jpg"
@@ -1098,8 +1006,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p5.jpg"
@@ -1116,8 +1022,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p6.jpg"
@@ -1134,8 +1038,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p7.jpg"
@@ -1152,8 +1054,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p8.jpg"
@@ -1170,8 +1070,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Other Brands",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/bliss-lawn-p9.jpg"
@@ -1188,8 +1086,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p2.jpg"
@@ -1206,8 +1102,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p3.jpg"
@@ -1224,8 +1118,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p4.jpg"
@@ -1242,8 +1134,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p5.jpg"
@@ -1260,8 +1150,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p6.jpg"
@@ -1278,8 +1166,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p7.jpg"
@@ -1296,8 +1182,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p8.jpg"
@@ -1314,8 +1198,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p9.jpg"
@@ -1332,8 +1214,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p10.jpg"
@@ -1350,8 +1230,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p11.jpg"
@@ -1368,8 +1246,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p12.jpg"
@@ -1386,8 +1262,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Daria",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/daria-plush-catalog-p13.jpg"
@@ -1404,8 +1278,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p1.jpg"
@@ -1422,8 +1294,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p2.jpg"
@@ -1440,8 +1310,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p3.jpg"
@@ -1458,8 +1326,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p4.jpg"
@@ -1476,8 +1342,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p5.jpg"
@@ -1494,8 +1358,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p6.jpg"
@@ -1512,8 +1374,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p7.jpg"
@@ -1530,8 +1390,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p8.jpg"
@@ -1548,8 +1406,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Charizma",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/charizma-signature-lawn-unstitched-collection-vol-01-1-p9.jpg"
@@ -1566,8 +1422,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p1.jpg",
@@ -1585,8 +1439,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p3.jpg",
@@ -1604,8 +1456,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p5.jpg",
@@ -1623,8 +1473,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p7.jpg",
@@ -1642,8 +1490,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p9.jpg",
@@ -1661,8 +1507,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p11.jpg",
@@ -1680,8 +1524,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p13.jpg",
@@ -1699,8 +1541,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p15.jpg",
@@ -1718,8 +1558,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p17.jpg",
@@ -1737,8 +1575,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Noors Lehr",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/noors-lehr-luxury-chiffon-2025-p19.jpg",
@@ -1756,8 +1592,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-dastan-vol-03-p1.jpg"
@@ -1774,8 +1608,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-dastan-vol-03-p2.jpg"
@@ -1792,8 +1624,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-dastan-vol-03-p3.jpg"
@@ -1810,8 +1640,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-dastan-vol-03-p4.jpg"
@@ -1828,8 +1656,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-dastan-vol-03-p5.jpg"
@@ -1846,8 +1672,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-dastan-vol-03-p6.jpg"
@@ -1864,8 +1688,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-riwayat-luxury-lawn-vol-15-p1.jpg"
@@ -1882,8 +1704,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-riwayat-luxury-lawn-vol-15-p2.jpg"
@@ -1900,8 +1720,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-riwayat-luxury-lawn-vol-15-p3.jpg"
@@ -1918,8 +1736,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-riwayat-luxury-lawn-vol-15-p4.jpg"
@@ -1936,8 +1752,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-riwayat-luxury-lawn-vol-15-p5.jpg"
@@ -1954,8 +1768,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-riwayat-luxury-lawn-vol-15-p6.jpg"
@@ -1972,8 +1784,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-riwayat-luxury-lawn-vol-15-p7.jpg"
@@ -1990,8 +1800,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Ramsha",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/ramsha-riwayat-luxury-lawn-vol-15-p8.jpg"
@@ -2008,8 +1816,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p3.jpg",
@@ -2029,8 +1835,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p7.jpg",
@@ -2050,8 +1854,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p11.jpg",
@@ -2071,8 +1873,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p15.jpg",
@@ -2092,8 +1892,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p19.jpg",
@@ -2113,8 +1911,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p23.jpg",
@@ -2134,8 +1930,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p27.jpg",
@@ -2155,8 +1949,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p31.jpg",
@@ -2176,8 +1968,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p35.jpg",
@@ -2197,8 +1987,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p39.jpg",
@@ -2218,8 +2006,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p43.jpg",
@@ -2239,8 +2025,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p47.jpg",
@@ -2260,8 +2044,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p51.jpg",
@@ -2281,8 +2063,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p55.jpg",
@@ -2302,8 +2082,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p59.jpg",
@@ -2323,8 +2101,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Kahf",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kahf-aangan-catalog-p63.jpg",
@@ -2344,8 +2120,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Iraar",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kohinoor-by-iraar-p1.jpg"
@@ -2362,8 +2136,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Iraar",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kohinoor-by-iraar-p2.jpg"
@@ -2380,8 +2152,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Iraar",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kohinoor-by-iraar-p3.jpg"
@@ -2398,8 +2168,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Iraar",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kohinoor-by-iraar-p4.jpg"
@@ -2416,8 +2184,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Iraar",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kohinoor-by-iraar-p5.jpg"
@@ -2434,8 +2200,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Iraar",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kohinoor-by-iraar-p6.jpg"
@@ -2452,8 +2216,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Iraar",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kohinoor-by-iraar-p7.jpg"
@@ -2470,8 +2232,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Iraar",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/kohinoor-by-iraar-p8.jpg"
@@ -2488,8 +2248,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p1.jpg"
@@ -2506,8 +2264,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p2.jpg"
@@ -2524,8 +2280,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p3.jpg"
@@ -2542,8 +2296,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p4.jpg"
@@ -2560,8 +2312,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p5.jpg"
@@ -2578,8 +2328,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p6.jpg"
@@ -2596,8 +2344,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p7.jpg"
@@ -2614,8 +2360,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p8.jpg"
@@ -2632,8 +2376,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p9.jpg"
@@ -2650,8 +2392,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p10.jpg"
@@ -2668,8 +2408,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Mausummery",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/mausummery-emb-vol-1-p11.jpg"
@@ -2686,8 +2424,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p2.jpg",
@@ -2707,8 +2443,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p6.jpg",
@@ -2728,8 +2462,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p10.jpg",
@@ -2749,8 +2481,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p14.jpg",
@@ -2770,8 +2500,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p18.jpg",
@@ -2791,8 +2519,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p22.jpg",
@@ -2812,8 +2538,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p26.jpg",
@@ -2833,8 +2557,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p30.jpg",
@@ -2854,8 +2576,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Nureh",
     "category": "Luxury Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/nureh-gardenia-emb-printed-collection-p34.jpg",
@@ -2875,8 +2595,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p1.jpg"
@@ -2893,8 +2611,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p2.jpg"
@@ -2911,8 +2627,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p3.jpg"
@@ -2929,8 +2643,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p4.jpg"
@@ -2947,8 +2659,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p5.jpg"
@@ -2965,8 +2675,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p6.jpg"
@@ -2983,8 +2691,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p7.jpg"
@@ -3001,8 +2707,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p8.jpg"
@@ -3019,8 +2723,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p9.jpg"
@@ -3037,8 +2739,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p10.jpg"
@@ -3055,8 +2755,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p11.jpg"
@@ -3073,8 +2771,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p12.jpg"
@@ -3091,8 +2787,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Shezlin",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/shezlin-eid-edit-26-p13.jpg"
@@ -3109,8 +2803,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p1.jpg"
@@ -3127,8 +2819,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p2.jpg"
@@ -3145,8 +2835,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p3.jpg"
@@ -3163,8 +2851,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p4.jpg"
@@ -3181,8 +2867,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p5.jpg"
@@ -3199,8 +2883,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p6.jpg"
@@ -3217,8 +2899,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p7.jpg"
@@ -3235,8 +2915,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p8.jpg"
@@ -3253,8 +2931,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p9.jpg"
@@ -3271,8 +2947,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p10.jpg"
@@ -3289,8 +2963,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p11.jpg"
@@ -3307,8 +2979,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Hemline",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/soleil-by-hemline-p12.jpg"
@@ -3325,8 +2995,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p1.jpg"
@@ -3343,8 +3011,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p2.jpg"
@@ -3361,8 +3027,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p3.jpg"
@@ -3379,8 +3043,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p4.jpg"
@@ -3397,8 +3059,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p5.jpg"
@@ -3415,8 +3075,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p6.jpg"
@@ -3433,8 +3091,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p7.jpg"
@@ -3451,8 +3107,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p8.jpg"
@@ -3469,8 +3123,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p9.jpg"
@@ -3487,8 +3139,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p10.jpg"
@@ -3505,8 +3155,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p11.jpg"
@@ -3523,8 +3171,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Zaha",
     "category": "Party Wears",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/zaha-festive-lawn-26-p12.jpg"
@@ -3541,8 +3187,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p1.jpg"
@@ -3559,8 +3203,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p2.jpg"
@@ -3577,8 +3219,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p3.jpg"
@@ -3595,8 +3235,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p4.jpg"
@@ -3613,8 +3251,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p5.jpg"
@@ -3631,8 +3267,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p6.jpg"
@@ -3649,8 +3283,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p7.jpg"
@@ -3667,8 +3299,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p8.jpg"
@@ -3685,8 +3315,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p9.jpg"
@@ -3703,8 +3331,6 @@ window.SARA_PRODUCTS = (window.SARA_PRODUCTS || []).concat([
     "brand": "Roheenaz",
     "category": "Original Lawns",
     "fabricType": "Unstitched",
-    "price": 0,
-    "priceLabel": "Contact for price",
     "stock": 1,
     "images": [
       "assets/products/veil-of-summer-by-roheenaz-p10.jpg"

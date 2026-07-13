@@ -302,8 +302,6 @@ def build_catalog():
                 "brand": spec["brand"],
                 "category": spec["category"],
                 "fabricType": "Unstitched",
-                "price": 0,
-                "priceLabel": "Contact for price",
                 "stock": 1,
                 "images": images,
                 "description": f"{name} from {spec['name']}.",

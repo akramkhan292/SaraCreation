@@ -28,6 +28,16 @@
     x: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>'
   };
 
+  const catalogPriceMasks = [
+    { match: "belle-saison-by-esmel-", width: 720, height: 640, rects: [[610, 546, 110, 33]] },
+    { match: "elaf-bridgerton-lookbook-26-", width: 720, height: 509, rects: [[505, 474, 72, 27]] },
+    { match: "mausummery-emb-vol-1-", width: 720, height: 833, rects: [[475, 720, 140, 46]] },
+    { match: "shezlin-eid-edit-26-", width: 720, height: 1018, rects: [[372, 687, 195, 56]] },
+    { match: "soleil-by-hemline-", width: 720, height: 868, rects: [[80, 724, 155, 48]] },
+    { match: "veil-of-summer-by-roheenaz-", width: 719, height: 822, rects: [[88, 635, 155, 44]] },
+    { match: "zaha-festive-lawn-26-", width: 720, height: 720, rects: [[104, 604, 155, 36]] }
+  ];
+
   document.addEventListener("DOMContentLoaded", init);
 
   function init() {
@@ -144,7 +154,7 @@
     els.menuCollectionCount.textContent = formatNumber(collections.length);
     els.collectionMenuList.innerHTML = collections.map((collection) => `
       <button class="collection-menu-item" type="button" data-collection="${escapeHtml(collection.slug)}">
-        <img src="${escapeHtml(collection.coverImage)}" alt="" loading="lazy" decoding="async">
+        ${catalogImageTemplate(collection.coverImage, "", true)}
         <span>
           <strong>${escapeHtml(collection.name)}</strong>
           <small>${escapeHtml(collection.brand)} / ${formatNumber(collection.productCount)} ${plural(collection.productCount, "design")}</small>
@@ -173,7 +183,7 @@
       <article class="collection-card">
         <button type="button" data-collection="${escapeHtml(collection.slug)}" aria-label="Open ${escapeHtml(collection.name)}">
           <span class="collection-card-media">
-            <img src="${escapeHtml(collection.coverImage)}" alt="${escapeHtml(collection.name)}" loading="lazy" decoding="async">
+            ${catalogImageTemplate(collection.coverImage, collection.name)}
           </span>
           <span class="collection-card-body">
             <small>${escapeHtml(collection.brand)}</small>
@@ -251,7 +261,7 @@
       <article class="product-card">
         <button type="button" data-product="${escapeHtml(product.slug)}" aria-label="View ${escapeHtml(product.name)}, reference ${escapeHtml(product.id)}">
           <span class="product-media">
-            <img src="${escapeHtml(product.images[0])}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
+            ${catalogImageTemplate(product.images[0], product.name)}
           </span>
           <span class="product-info">
             <small>${escapeHtml(product.id)}</small>
@@ -280,7 +290,7 @@
       <div class="thumb-row" aria-label="Product images">
         ${product.images.map((image, index) => `
           <button class="thumb-button" type="button" data-image="${escapeHtml(image)}" aria-current="${index === 0 ? "true" : "false"}" aria-label="View image ${index + 1}">
-            <img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">
+            ${catalogImageTemplate(image, "", true)}
           </button>
         `).join("")}
       </div>
@@ -289,8 +299,8 @@
     els.dialogContent.innerHTML = `
       <div class="dialog-grid">
         <div class="dialog-gallery">
-          <div class="dialog-image-stage">
-            <img id="dialogMainImage" src="${escapeHtml(product.images[0])}" alt="${escapeHtml(product.name)}">
+          <div class="dialog-image-stage" id="dialogMainImageStage">
+            ${catalogImageTemplate(product.images[0], product.name, false, false)}
           </div>
           ${thumbnails}
         </div>
@@ -299,7 +309,6 @@
           <h2 id="dialogTitle">${escapeHtml(product.name)}</h2>
           <p class="product-reference">Reference ${escapeHtml(product.id)}</p>
           <p class="dialog-meta">${escapeHtml(product.fabricType)} / ${escapeHtml(product.category)}</p>
-          <p class="detail-price">${escapeHtml(displayPrice(product))}</p>
           <div class="dialog-actions">
             <a class="primary-button" href="${buildProductWhatsAppUrl(product)}" target="_blank" rel="noreferrer">
               <span class="icon-wrap" data-icon="message" aria-hidden="true"></span>
@@ -319,8 +328,8 @@
   function handleDialogAction(event) {
     const thumb = event.target.closest("button[data-image]");
     if (thumb) {
-      const mainImage = els.dialogContent.querySelector("#dialogMainImage");
-      mainImage.src = thumb.dataset.image;
+      const mainImageStage = els.dialogContent.querySelector("#dialogMainImageStage");
+      mainImageStage.innerHTML = catalogImageTemplate(thumb.dataset.image, currentProduct ? currentProduct.name : "", false, false);
       els.dialogContent.querySelectorAll(".thumb-button").forEach((button) => {
         button.setAttribute("aria-current", String(button === thumb));
       });
@@ -425,7 +434,7 @@
   }
 
   function productShareText(product) {
-    return `Hi saracreations0810, I am interested in ${product.collectionName} - ${product.name} (${product.id}). Price: ${displayPrice(product)}. Link: ${productUrl(product)}`;
+    return `Hi saracreations0810, I am interested in ${product.collectionName} - ${product.name} (${product.id}). Link: ${productUrl(product)}`;
   }
 
   function productUrl(product) {
@@ -468,10 +477,28 @@
     showToast("Product link copied");
   }
 
-  function displayPrice(product) {
-    if (product.priceLabel) return product.priceLabel;
-    if (!product.price) return "Contact for price";
-    return `Rs. ${new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(product.price)}`;
+  function catalogImageTemplate(image, alt, decorative = false, lazy = true) {
+    const escapedImage = escapeHtml(image);
+    const escapedAlt = escapeHtml(alt);
+    const mask = catalogPriceMasks.find((rule) => image.includes(rule.match));
+
+    if (!mask) {
+      return `<img class="catalog-art" src="${escapedImage}" alt="${escapedAlt}"${lazy ? ' loading="lazy" decoding="async"' : ""}>`;
+    }
+
+    const accessibility = decorative
+      ? 'aria-hidden="true"'
+      : `role="img" aria-label="${escapedAlt}"`;
+    const rects = mask.rects.map(([x, y, width, height]) => (
+      `<rect x="${x}" y="${y}" width="${width}" height="${height}" fill="#fff"></rect>`
+    )).join("");
+
+    return `
+      <svg class="catalog-art" viewBox="0 0 ${mask.width} ${mask.height}" preserveAspectRatio="xMidYMid meet" ${accessibility} focusable="false">
+        <image href="${escapedImage}" x="0" y="0" width="${mask.width}" height="${mask.height}" preserveAspectRatio="none"></image>
+        ${rects}
+      </svg>
+    `;
   }
 
   function formatNumber(value) {

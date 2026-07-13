@@ -1,16 +1,15 @@
 :root {
   color-scheme: light;
-  --ink: #171a18;
-  --muted: #66706b;
+  --ink: #171c2b;
+  --muted: #667085;
   --paper: #ffffff;
-  --surface: #f4f6f4;
-  --surface-warm: #f8f5f1;
-  --line: #dce2de;
-  --green: #245b49;
-  --green-dark: #173f33;
-  --berry: #8b394a;
-  --focus: #176b9f;
-  --shadow: 0 18px 48px rgba(23, 26, 24, .12);
+  --surface: #f5f7fb;
+  --brand-soft: #edf3ff;
+  --line: #dce2ec;
+  --brand: #0d43c7;
+  --brand-dark: #092f91;
+  --focus: #0b55db;
+  --shadow: 0 18px 48px rgba(25, 46, 91, .12);
   --radius: 6px;
   --header-height: 68px;
 }
@@ -101,7 +100,7 @@ h3 {
 
 .eyebrow {
   margin: 0 0 9px;
-  color: var(--berry);
+  color: var(--brand);
   font-size: .76rem;
   font-weight: 800;
   letter-spacing: .08em;
@@ -133,7 +132,7 @@ h3 {
   justify-content: space-between;
   gap: 18px;
   padding: 10px clamp(16px, 4vw, 48px);
-  border-bottom: 1px solid rgba(220, 226, 222, .92);
+  border-bottom: 1px solid rgba(220, 226, 236, .94);
   background: rgba(255, 255, 255, .95);
   backdrop-filter: blur(14px);
 }
@@ -146,10 +145,14 @@ h3 {
 }
 
 .brand img {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   flex: 0 0 auto;
-  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(13, 67, 199, .12);
 }
 
 .brand strong,
@@ -159,6 +162,7 @@ h3 {
 }
 
 .brand strong {
+  color: var(--brand-dark);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;
   letter-spacing: 0;
@@ -276,15 +280,14 @@ h3 {
 }
 
 .collection-menu-item[aria-current="page"] {
-  box-shadow: inset 3px 0 var(--green);
+  box-shadow: inset 3px 0 var(--brand);
 }
 
-.collection-menu-item img {
+.collection-menu-item .catalog-art {
   width: 46px;
   height: 52px;
   border-radius: 4px;
   background: var(--surface);
-  object-fit: contain;
 }
 
 .collection-menu-item strong,
@@ -327,13 +330,13 @@ h3 {
 
 .header-action,
 .primary-button {
-  background: var(--green-dark);
+  background: var(--brand);
   color: #fff;
 }
 
 .header-action:hover,
 .primary-button:hover {
-  background: var(--green);
+  background: var(--brand-dark);
 }
 
 .secondary-button,
@@ -411,8 +414,8 @@ h3 {
 }
 
 .search-field:focus-within {
-  border-color: var(--green);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 12%, transparent);
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 12%, transparent);
 }
 
 .search-field input {
@@ -427,7 +430,7 @@ h3 {
 }
 
 .search-field input::placeholder {
-  color: #8a938e;
+  color: #8993a5;
 }
 
 .collection-grid {
@@ -462,8 +465,8 @@ h3 {
 
 .collection-card > button:hover,
 .product-card > button:hover {
-  border-color: #aeb8b2;
-  box-shadow: 0 12px 30px rgba(23, 26, 24, .08);
+  border-color: #afbad0;
+  box-shadow: 0 12px 30px rgba(25, 46, 91, .09);
   transform: translateY(-2px);
 }
 
@@ -475,10 +478,9 @@ h3 {
   background: var(--surface);
 }
 
-.collection-card-media img {
+.collection-card-media .catalog-art {
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
 .collection-card-body {
@@ -490,7 +492,7 @@ h3 {
 }
 
 .collection-card-body > small {
-  color: var(--berry);
+  color: var(--brand);
   font-size: .72rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -557,10 +559,9 @@ h3 {
   background: var(--surface);
 }
 
-.product-media img {
+.product-media .catalog-art {
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
 .product-info {
@@ -589,7 +590,7 @@ h3 {
 
 .empty-state {
   padding: 48px 20px;
-  border: 1px dashed #bcc5c0;
+  border: 1px dashed #b9c3d4;
   border-radius: var(--radius);
   background: var(--surface);
   text-align: center;
@@ -600,8 +601,10 @@ h3 {
 }
 
 .contact-section {
-  background: var(--ink);
-  color: #fff;
+  border-top: 1px solid #d5e1fa;
+  border-bottom: 1px solid #d5e1fa;
+  background: var(--brand-soft);
+  color: var(--ink);
 }
 
 .contact-inner {
@@ -616,7 +619,7 @@ h3 {
 }
 
 .contact-section .eyebrow {
-  color: #d8a3ae;
+  color: var(--brand);
 }
 
 .contact-actions {
@@ -627,18 +630,25 @@ h3 {
 }
 
 .contact-button {
-  border-color: rgba(255, 255, 255, .24);
-  color: #fff;
+  border-color: var(--line);
+  background: var(--paper);
+  color: var(--ink);
 }
 
 .contact-button:hover {
-  background: rgba(255, 255, 255, .09);
+  border-color: #b5c3df;
+  background: #f8faff;
 }
 
 .contact-button.contact-primary {
-  border-color: #d8eee5;
-  background: #d8eee5;
-  color: var(--green-dark);
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+
+.contact-button.contact-primary:hover {
+  border-color: var(--brand-dark);
+  background: var(--brand-dark);
 }
 
 .site-footer {
@@ -719,10 +729,9 @@ h3 {
   overflow: hidden;
 }
 
-.dialog-image-stage img {
+.dialog-image-stage .catalog-art {
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
 .thumb-row {
@@ -749,12 +758,15 @@ h3 {
 }
 
 .thumb-button[aria-current="true"] {
-  border-color: var(--green);
+  border-color: var(--brand);
 }
 
-.thumb-button img {
+.thumb-button .catalog-art {
   width: 100%;
   height: 100%;
+}
+
+img.catalog-art {
   object-fit: contain;
 }
 
@@ -775,8 +787,7 @@ h3 {
 }
 
 .product-reference,
-.dialog-meta,
-.detail-price {
+.dialog-meta {
   margin: 0;
 }
 
@@ -788,12 +799,6 @@ h3 {
 .dialog-meta {
   color: var(--muted);
   line-height: 1.55;
-}
-
-.detail-price {
-  color: var(--berry);
-  font-size: 1.2rem;
-  font-weight: 900;
 }
 
 .dialog-actions {
@@ -907,13 +912,15 @@ h3 {
   }
 
   .site-header {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
     gap: 8px;
     padding: 8px 12px;
   }
 
   .brand img {
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
   }
 
   .brand span {
@@ -922,6 +929,25 @@ h3 {
 
   .nav-contact {
     display: none;
+  }
+
+  .header-nav {
+    min-width: 0;
+  }
+
+  .header-action {
+    width: 44px;
+    justify-self: end;
+    padding: 0;
+  }
+
+  .header-action-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .collection-menu-panel {
@@ -1076,20 +1102,6 @@ h3 {
 
   h2 {
     font-size: 1.65rem;
-  }
-
-  .header-action {
-    width: 44px;
-    padding: 0;
-  }
-
-  .header-action-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
   }
 
   .collection-menu summary {
